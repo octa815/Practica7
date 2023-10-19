@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagenes/sunegamilogo.png">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <script src="javas.js"></script>
+    <title>Formulario de Búsqueda de Fotos - SUNEGAMI</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
+        <form id="botbus">
+            <button type="submit" class="icon-search"></button> 
+            <input type="search" class="busqueda">
+        </form>
+        <aside>
+            <ul>
+                <li>
+                    <button onclick="document.getElementById('login').style.display='block'" class="icon-login">Iniciar</button>
+                </li>
+                <li>
+                    <button onclick="document.getElementById('registro').style.display='block'" class="icon-user-plus">Registro</button>
+                </li>
+            </ul>
+        </aside>
+        <nav id="menu">
+            <label for="chkMenu">&equiv;</label>
+            <input type="checkbox" id="chkMenu">
+            <ul>
+                <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
+                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+            </ul>
+        </nav>   
+    </header>
+    <main id="formulario-busqueda">
+        <fieldset>
+            <legend>Realizar una búsqueda de fotos</legend>
+            <form action="resultado.html" method="get">
+                <p>
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo">
+                </p>
+                <p>
+                    <label for="fecha1">Fecha desde:</label>
+                    <input type="date" id="fecha" name="fecha1">
+                    <label for="fecha2"> hasta:</label>
+                    <input type="date" id="fecha2" name="fecha2">
+                </p>
+                <p>
+                    <label for="country">País:</label>
+                    <input type="text" id="country" name="pais">
+                </p>
+                <aside id="boton">
+                    <button type="submit">Buscar</button>
+                </aside>
+            </form>
+        </fieldset>         
+    </main>
+    <!--************************************************************************************-->
+    <aside contenteditable="false">
+        <aside id="login" class="modal" >
+            <form action="index2.html" class="modal-content animate">
+                <section id="seccion">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <fieldset>  
+                    <legend>DATOS DE ACCESO</legend>  
+                    <h3> INICIAR SESIÓN </h3>
+                                      
+                    <!-- <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
+                        <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
+                        <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>-->
+                        
+                            <p>
+                                <label for="email">Email: </label>
+                                <input type="email" id="email" name="email" required>
+                            </p>
+                            <p>
+                                <label for="pass">Contraseña: </label>
+                                <input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" required>
+                            </p>
+                        
+                        <button type="submit">Inicar sesión</button>
+                        <p>
+                            <label><input type="checkbox" checked="checked" name="remember"> Recordar</label>
+                        </p>
+                        <p>
+                            <span class="psw">Olvidaste tu<a href="#">contraseña?</a></span>
+                        </p>
+                    </fieldset>  
+                </section>
+            </form> 
+        </aside>
+    </aside>
+    <!--************************************************************************************-->
+    <aside contenteditable="false">
+        <aside id="registro" class="modal2">
+            <form action="index.html" class="modal2-content animate">
+                <section id="seccion2">
+                    <fieldset>  
+                        <legend>TUS DATOS</legend>  
+                        <h3> REGISTRO </h3>
+                            <p>Introduce tus datos</p>
+                            <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
+                            <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
+                            <p><label for="pass_reg">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass_reg" name="pass_reg" required></p>
+                            <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>
+                            <p><label for="email_reg">Email: </label><input type="email" id="email_reg" name="email_reg" required></p>
+                            <p>Sexo:</p>
+                                <input type="radio" id="masculino" name="sexo" value="H"> 
+                                <label for="masculino">H</label>
+                                <input type="radio" id="femenino"  name="sexo" value="M"> 
+                                <label for="femenino">M</label>
+                            <p><label for="fecha1">Fecha de nacimiento:</label>
+                            <input type="date" id="fecha1" name="fecha1"></p>
+                            <p><label for="ciudad">Ciudad: </label>
+                                <select id="ciudad" name="ciudad">
+                                    <option value="1">Alicante</option>
+                                    <option value="33">Madrid</option>
+                                    <option value="40">Valencia</option>
+                                </select>
+                            </p>
+                            <p><label for="pais">País: </label>
+                                <select id="pais" name="pais">
+                                    <option value="1">Alemania</option>
+                                    <option value="33">España</option>
+                                    <option value="40">Francia</option>
+                                </select>
+                            </p> 
+                    </fieldset>   
+                </section>
+                <section id="foto">
+                    <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <fieldset>   
+                        <legend>TU FOTO</legend> 
+                            <h4>Foto:</h4>
+                            <label for="input-image"></label> 
+                                <figure>
+                                    <img src="./imagenes/user1.jpg" alt="imagen">
+                                </figure> 
+                            <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
+                    </fieldset>     
+                </section>
+                <aside id="log">
+                    <input type="submit" value="Registrarse">
+                </aside>   
+            </form> 
+        </aside>
+    </aside>
+    <!--************************************************************************************-->
+    <footer>
+        <p>&copy;
+            <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
+            <abbr title = "DAW"> Practica 4 </abbr>
+        </p>
+    </footer>
+    <script>
+        login();
+        registro();
+    </script>
+</body>
+</html>

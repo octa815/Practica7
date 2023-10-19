@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagenes/sunegamilogo.png">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <script src="javas.js"></script>
+    <title>Página Inicio-SUNEGAMI</title>
+</head>
+<body>
+    <header>
+        <a href="index2.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
+        <form id="botbus">
+            <button type="submit" class="icon-search"></button>
+            <input type="search" class="busqueda">  
+        </form>
+        <aside>
+            <figure>
+                <button class="mipanel" onclick=openNav()><img src="./imagenes/user1.jpg" alt="user" id="user"></button>
+            </figure> 
+            <aside id="panel" class="lateral">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <figure>
+                    <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
+                    <figcaption>Usuario: Etzio</figcaption>
+                </figure>
+                <a href="index2.html" class="icon-doc-new">Mis datos</a>
+                <a href="index2.html" class="icon-search">Mis álbumes</a>
+                <a href="index2.html" class="icon-doc-new">Crear álbum</a>
+                <a href="solicitar_album.html" class="icon-search">Solicitar álbum</a>
+                <a href="index.html" class="icon-trash-empty">Darme de baja</a>
+                <a href="index.html" class="icon-logout">Cerrar sesión</a>  
+                <a class="icon-moon">claro/oscuro</a>
+                <aside id="darkbot">
+                    <label class="switch">
+                        <input type="checkbox" onclick="oscuro()">
+                        <span class="slider round"></span>
+                    </label> 
+                </aside> 
+            </aside>             
+        </aside> 
+        <nav id="menu"> 
+            <label for="chkMenu">&equiv;</label>
+            <input type="checkbox" id="chkMenu">
+            <ul>
+                <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
+                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+                <li><a href="solicitar_album.html" class="icon-search"><span>Solictar álbum</span></a></li>
+                <li><a href="index.html" class="icon-logout"><span>Cerrar sesión</span></a></li>                  
+            </ul>   
+        </nav>   
+    </header>
+    <main>
+        <section id="principal">
+            <h3> FOTO PRINCIPAL </h3>
+            <article>
+                <h4 title="Foto1">Foto1</h4>               
+                <a href="detalle.html">
+                    <img src="./imagenes/intro.jpg" alt="imagen" class="imagenes">
+                    <img src="./imagenes/muradin.jpg" alt="imagen" class="imagenes">
+                    <img src="./imagenes/horda.jpg" alt="imagen" class="imagenes">
+                </a>
+                <footer>
+                    <div>
+                        <p class="icon-male">País</p>
+                        <p class="icon-calendar">Fecha: 2023-09-25</p>
+                    </div>  
+                </footer>
+            </article>
+        </section>
+        <section id="secundaria">
+            <h3> FOTOS secundarias </h3>
+            <aside>
+                <figure>
+                    <h4 title="Foto 2">Foto 2</h4>
+                    <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-female">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 3">Foto 3</h4>
+                    <a href="detalle.html"><img src="./imagenes/intro.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-female">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 4">Foto 4</h4>
+                    <a href="detalle.html"><img src="./imagenes/horda.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-female">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+            </aside>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy;
+            <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
+            <abbr title = "DAW"> Practica 4 </abbr>
+        </p>
+    </footer>
+    <script>
+        scroll();
+    </script> 
+</body>
+
+</html>

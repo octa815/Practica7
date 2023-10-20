@@ -192,9 +192,20 @@ figure{
     transition: transform 1s;
 }
 
-#resultados-busqueda>ul{
-    padding:5em;
+#resultados-busqueda>aside{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-gap: 1.5em;
+    padding: .5em;
     list-style: none;
+}
+
+#resultados-busqueda>aside>figure>a>img{
+    width: 100%;
+    height: 15em;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
 }
 header{
     background-color:#292828;
@@ -233,7 +244,7 @@ aside>ul>li>a:hover{
 /*identificadores seccion*/
 #principal{
     text-align: center;
-    margin: 1em 3em 1em 3em;
+    margin: 1em 5em 1em 3em;
 }
 
 #secundaria{
@@ -243,15 +254,24 @@ aside>ul>li>a:hover{
 
 /*ATENCION con este grid controlamos responsive*/
 /*SECCIONES*/
+
 #secundaria>aside{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     grid-gap: 1.5em;
 }
 #formulario-busqueda{
     display:flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+#formulario-busqueda>fieldset>form>p>label{
+    display:flex;    
+}
+
+#formulario-busqueda>fieldset>form>p>input{
+    display:flex;    
 }
 
 #formulario-busqueda>form>aside{
@@ -446,6 +466,14 @@ aside>ul>li>a:hover{
     grid-area: titulo;
 }
 
+#formulario>form>aside>p>label{
+    display:flex;
+}
+#formulario>form>aside>p>input{
+    display:flex;
+}
+
+
 /*DETALLE*/
 #detalle-foto{
     display: grid;
@@ -457,8 +485,10 @@ aside>ul>li>a:hover{
 }
 #detalle-foto>figure{
     grid-area: figure;
+    padding: 1.5em;;
 }
-#detalle-foto>aside{
+#detalle-foto>fieldset{
+   
     display: flex;
     justify-content: flex-start;
     flex-direction: column;

@@ -1,0 +1,33 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img{
+    max-width: 550px;
+}
+#Coste{
+    color: red;
+}
+#infoResultado{
+    font-style: italic;
+    font-weight: bold;
+
+}
+fieldset>legend{
+    color: green;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+
+
+header,footer,#login,#registro{
+    display: none;
+}
+
+
+
+#env,#btnResultado1,#btnResultado2,button{
+    display: none;
+}

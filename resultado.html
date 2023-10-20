@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css" media="screen" title="Modo principal">
+    
+    <!-- Modos de la página -->
+    <link rel="alternate stylesheet" href="estilo-oscuro.css" title="Modo oscuro">
+    <link rel="alternate stylesheet" href="estilo-grande.css" title="Modo grande">
+    
+    <link rel="stylesheet" href ="impresion.css" media="print">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
     <script src="javas.js"></script>
     <title>Resultados de Búsqueda - SUNEGAMI</title>
@@ -18,13 +24,13 @@
         </form>
         <aside>
             <figure>
-                <button class="mipanel" onclick=openNav()><img src="./imagenes/user1.jpg" alt="user" id="user"></button>
+                <button class="mipanel" onclick=openNav()><img src="./imagenes/knekro1.png" alt="user" id="user"></button>
             </figure> 
             <aside id="panel" class="lateral">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                 <figure>
-                    <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
-                    <figcaption>Usuario: Etzio</figcaption>
+                    <img src="./imagenes/knekro1.png" alt="usu" id="usuario">
+                    <figcaption>Usuario: Knekro</figcaption>
                 </figure>
                 <a href="index2.html" class="icon-doc-new">Mis datos</a>
                 <a href="index2.html" class="icon-search">Mis álbumes</a>
@@ -55,23 +61,31 @@
     <main>
         <section id="resultados-busqueda">
             <h2>Resultados de la búsqueda</h2>
-            <ul>
-                <li>    
-                    <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="Foto 1"></a>
-                    <h3>Título de la Foto 1</h3>
-                    <p>Fecha: 2023-09-26</p>
-                    <p>País: País 1</p>
-                    <a href="detalle.html">Ver detalle</a>
-                </li>
-                <!-- Repetir estructura similar para otros resultados de búsqueda -->
-                <li>
-                    <a href="mensaje_error.html"><img src="./imagenes/intro.jpg" alt="Foto 2"></a>
-                    <h3>Título de la Foto 2</h3>
-                    <p>Fecha: 2023-09-25</p>
-                    <p>País: País 2</p>
-                    <a href="mensaje_error.html">Ver detalle (Usuario no registrado)</a> 
-                </li>
-            </ul>
+            <aside>
+                <figure>
+                    <h4 title="Foto 2">Foto 2</h4>
+                    <a href="mensaje_error.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-globe">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                            <a href="detalle.html" id="btnResultado1">Ver detalle</a>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="titulo foto 2">Foto 2</h4>
+                    <a href="mensaje_error.html"><img src="./imagenes/gorra.png" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-globe">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                            <a href="detalle.html" id="btnResultado1">Ver detalle</a>
+                        </div> 
+                    </footer>
+                </figure>
+            </aside>
+            
         </section>
     </main>
     <footer>

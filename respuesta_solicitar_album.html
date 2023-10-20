@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css" media="screen" title="Modo principal">
+    
+    <!-- Modos de la página -->
+    <link rel="alternate stylesheet" href="estilo-oscuro.css" title="Modo oscuro">
+    <link rel="alternate stylesheet" href="estilo-grande.css" title="Modo grande">
+    
     <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <link rel="stylesheet" href ="impresion.css" media="print">
     <script src="javas.js"></script>
     <title>RESPUESTA-Impresón de álbum-SUNEGAMI</title>
     <style>
@@ -23,13 +29,13 @@
         </form>
         <aside>
             <figure>
-                <button class="mipanel" onclick=openNav()><img src="./imagenes/user1.jpg" alt="user" id="user"></button>
+                <button class="mipanel" onclick=openNav()><img src="./imagenes/knekro1.png" alt="user" id="user"></button>
             </figure> 
             <aside id="panel" class="lateral">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                 <figure>
-                    <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
-                    <figcaption>Usuario: Etzio</figcaption>
+                    <img src="./imagenes/knekro1.png" alt="usu" id="usuario">
+                    <figcaption>Usuario: Knekro</figcaption>
                 </figure>
                     <a href="index2.html" class="icon-doc-new">Mis datos</a>
                     <a href="index2.html" class="icon-search">Mis álbumes</a>
@@ -82,8 +88,8 @@
                 <p>Álbum de SUNEGAMI: <strong>Álbum 1</strong></p>
                 <p>Fecha de recepción: <strong>32/3/2079</strong></p>
                 <p>Impresión a color: <strong>Si</strong></p>
-                <p><strong>Coste del álbum: $99.00</strong></p>
-                <p>Recibirás un correo electrónico de confirmación con más detalles. Gracias por elegir nuestros servicios.</p>
+                <p id="Coste"><strong>Coste del álbum: $99.00</strong></p>
+                <p id="infoResultado">Recibirás un correo electrónico de confirmación con más detalles. Gracias por elegir nuestros servicios.</p>
             </fieldset>
         </div>
     </main>

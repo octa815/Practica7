@@ -104,7 +104,7 @@ body{
     min-height: 100vh;
     min-width: 400px;  
     /*background-color: linear-gradient(rgb(45, 162, 10), #0b0b0a);*/
-    background: linear-gradient(rgb(255, 255, 255), #4b4d4b);
+    background: linear-gradient(rgb(255, 255, 255), #9dcf8e);
     display:grid;
     grid-template-rows: auto auto 1fr auto;
     margin:0%;
@@ -114,9 +114,10 @@ body{
 }
 
 .dark-mode {
-    background: linear-gradient(rgb(0, 0, 0), #454845);
+    background: black;
     color: white;
   }
+
 
 #botbus{
     display: flex;
@@ -130,10 +131,6 @@ body{
 }
 main>div{
     padding: 1em 10em;
-}
-
-div>fieldset>legend{
-    font-size: 1.5em;
 }
 
 #contenedor_form{
@@ -195,20 +192,9 @@ figure{
     transition: transform 1s;
 }
 
-#resultados-busqueda>aside{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-    grid-gap: 1.5em;
-    padding: .5em;
+#resultados-busqueda>ul{
+    padding:5em;
     list-style: none;
-}
-
-#resultados-busqueda>aside>figure>a>img{
-    width: 100%;
-    height: 15em;
-    object-fit: cover;
-    object-position: center;
-    cursor: pointer;
 }
 header{
     background-color:#292828;
@@ -247,7 +233,7 @@ aside>ul>li>a:hover{
 /*identificadores seccion*/
 #principal{
     text-align: center;
-    margin: 1em 5em 1em 3em;
+    margin: 1em 3em 1em 3em;
 }
 
 #secundaria{
@@ -257,30 +243,20 @@ aside>ul>li>a:hover{
 
 /*ATENCION con este grid controlamos responsive*/
 /*SECCIONES*/
-
 #secundaria>aside{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     grid-gap: 1.5em;
 }
-
 #formulario-busqueda{
-    padding: 4em;
     display:flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-#formulario-busqueda>fieldset>form>p>label{
-    display:flex;    
-}
-
-#formulario-busqueda>fieldset>form>p>input{
-    display:flex;    
-}
-
-#formulario-busqueda>fieldset>legend{
-    font-size: 1.5em;
+#formulario-busqueda>form>aside{
+    display: flex;
+    justify-content: flex-end;
 }
 /*LOGIN*/
 .contenedor {
@@ -441,20 +417,10 @@ aside>ul>li>a:hover{
 #tarifas{
     display: block;
     grid-area: tarifas;
-    margin:2em
 }
 
 #formulario{
     grid-area: formulario;
-    margin: 2em;
-}
-
-#tarifas>legend{
-    font-size: 1.5em;
-}
-
-#formulario>legend{
-    font-size: 1.5em;
 }
 
 /*SEPARAR FORMULARIO ALBUMNES*/
@@ -480,17 +446,8 @@ aside>ul>li>a:hover{
     grid-area: titulo;
 }
 
-#formulario>form>aside>p>label{
-    display:flex;
-}
-#formulario>form>aside>p>input{
-    display:flex;
-}
-
-
 /*DETALLE*/
 #detalle-foto{
-    align-items: center;
     display: grid;
     grid-template-areas: "h2 h2" "aside figure";
     padding:.5em;
@@ -500,20 +457,12 @@ aside>ul>li>a:hover{
 }
 #detalle-foto>figure{
     grid-area: figure;
-    padding: .5em 5em .5em;
 }
-#detalle-foto>fieldset{
+#detalle-foto>aside{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
     flex-direction: column;
     grid-area: aside;
-    margin:.5em 5em .5em;
-}
-
-#detalle-foto>fieldset>legend{
-   
-   font-size: 1.5em;
 }
 
 h3{
@@ -573,7 +522,7 @@ input{
 
 /*MEDIAQUERIES*/
 
-@media ( min-width: 360px){
+@media ( min-width: 666px){
 
     #menu>ul>li{
         display:inline-block;
@@ -664,7 +613,12 @@ input{
         padding: .60em;
         justify-content: center;
         justify-items: center;
+    }
    
+
+}
+
+@media (max-width: 666px) {
 
     #mainalbum{
        display: block;
@@ -685,10 +639,6 @@ input{
     }
 
     main {
-        max-width: 360px;
+        max-width: 666px;
     }
 }
-}
-    @media (min-width: 700px){
-
-    }

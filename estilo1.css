@@ -104,7 +104,7 @@ body{
     min-height: 100vh;
     min-width: 400px;  
     /*background-color: linear-gradient(rgb(45, 162, 10), #0b0b0a);*/
-    background: linear-gradient(rgb(255, 255, 255), #4b4d4b);
+    background: linear-gradient(rgb(255, 255, 255), #9dcf8e);
     display:grid;
     grid-template-rows: auto auto 1fr auto;
     margin:0%;
@@ -114,7 +114,7 @@ body{
 }
 
 .dark-mode {
-    background: linear-gradient(rgb(0, 0, 0), #454845);
+    background: black;
     color: white;
   }
 
@@ -522,7 +522,7 @@ input{
 
 /*MEDIAQUERIES*/
 
-@media ( min-width: 360px){
+@media ( min-width: 666px){
 
     #menu>ul>li{
         display:inline-block;
@@ -613,7 +613,12 @@ input{
         padding: .60em;
         justify-content: center;
         justify-items: center;
+    }
    
+
+}
+
+@media (max-width: 666px) {
 
     #mainalbum{
        display: block;
@@ -634,10 +639,6 @@ input{
     }
 
     main {
-        max-width: 360px;
+        max-width: 666px;
     }
 }
-}
-    @media (min-width: 700px){
-
-    }

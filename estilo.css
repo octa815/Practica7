@@ -118,7 +118,6 @@ body{
     color: white;
   }
 
-
 #botbus{
     display: flex;
     align-items: center;
@@ -131,6 +130,10 @@ body{
 }
 main>div{
     padding: 1em 10em;
+}
+
+div>fieldset>legend{
+    font-size: 1.5em;
 }
 
 #contenedor_form{
@@ -260,7 +263,9 @@ aside>ul>li>a:hover{
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     grid-gap: 1.5em;
 }
+
 #formulario-busqueda{
+    padding: 4em;
     display:flex;
     align-items: center;
     justify-content: space-evenly;
@@ -274,9 +279,8 @@ aside>ul>li>a:hover{
     display:flex;    
 }
 
-#formulario-busqueda>form>aside{
-    display: flex;
-    justify-content: flex-end;
+#formulario-busqueda>fieldset>legend{
+    font-size: 1.5em;
 }
 /*LOGIN*/
 .contenedor {
@@ -437,10 +441,20 @@ aside>ul>li>a:hover{
 #tarifas{
     display: block;
     grid-area: tarifas;
+    margin:2em
 }
 
 #formulario{
     grid-area: formulario;
+    margin: 2em;
+}
+
+#tarifas>legend{
+    font-size: 1.5em;
+}
+
+#formulario>legend{
+    font-size: 1.5em;
 }
 
 /*SEPARAR FORMULARIO ALBUMNES*/
@@ -476,6 +490,7 @@ aside>ul>li>a:hover{
 
 /*DETALLE*/
 #detalle-foto{
+    align-items: center;
     display: grid;
     grid-template-areas: "h2 h2" "aside figure";
     padding:.5em;
@@ -485,14 +500,20 @@ aside>ul>li>a:hover{
 }
 #detalle-foto>figure{
     grid-area: figure;
-    padding: 1.5em;;
+    padding: .5em 5em .5em;
 }
 #detalle-foto>fieldset{
-   
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     grid-area: aside;
+    margin:.5em 5em .5em;
+}
+
+#detalle-foto>fieldset>legend{
+   
+   font-size: 1.5em;
 }
 
 h3{

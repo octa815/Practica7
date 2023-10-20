@@ -2,6 +2,6 @@
 @import "estilo.css";
 
 body{
-    background-color: black;
+    background: linear-gradient(rgb(0, 0, 0), #454845);
     color: white;
 }

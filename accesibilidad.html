@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Declaración de Accesibilidad</title>
+    <meta name="description" content="Crea tus propios albumnes de fotos"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagenes/sunegamilogo.png">
+    <link rel="stylesheet" href="estilo.css" media="screen" title="Modo principal">
+    
+    <!-- Modos de la página -->
+    <link rel="alternate stylesheet" href="estilo-oscuro.css" title="Modo oscuro">
+    <link rel="alternate stylesheet" href="estilo-grande.css" title="Modo grande">
+
+    <link rel="stylesheet" href ="impresion.css" media="print">
+    <link rel="stylesheet" href ="fontello/css/fontello.css">
+    
+    
+
+    <script src="javas.js"></script>
+    <title>Declaración de Accesibilidad</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo" id="logo"></a>
+        <form id="botbus">
+            <button type="submit" class="icon-search"></button> 
+            <input type="text" class="busqueda">
+        </form>
+        <aside>
+            <ul>
+                <li>
+                    <button onclick="document.getElementById('login').style.display='block'" class="icon-login">Iniciar</button>
+                </li>
+                <li>
+                    <button onclick="document.getElementById('registro').style.display='block'" class="icon-user-plus">Registro</button>
+                </li>
+            </ul> 
+        </aside> 
+        <nav id="menu">
+            <label for="chkMenu">&equiv;</label>
+            <input type="checkbox" id="chkMenu">
+            <ul>
+                <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
+                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+            </ul>
+        </nav>       
+    </header>
+    <main>
+
+        <h1>Declaración de Accesibilidad</h1>
+
+        <h2>Etiquetado Semántico</h2>
+        <p>Esta página web utiliza etiquetas semánticas HTML5 para estructurar el contenido de manera significativa. Se utilizan encabezados, párrafos, listas y otros elementos HTML de acuerdo con su propósito.</p>
+        
+        <h2>Texto Alternativo de las Imágenes</h2>
+        <p>Todas las imágenes de esta página incluyen atributos "alt" descriptivos que proporcionan una alternativa textual para el contenido visual. Esto ayuda a usuarios con discapacidades visuales a comprender el contenido de las imágenes.</p>
+        
+        <h2>Uso de Colores Accesibles</h2>
+        <p>Los colores utilizados en esta página se han seleccionado cuidadosamente para garantizar un alto contraste y legibilidad mediante<a href=" https://webaim.org/resources/contrastchecker/" data-link=" https://webaim.org/resources/contrastchecker/"> WebAim</a>. Se evitan combinaciones de colores que puedan dificultar la lectura o causar problemas de accesibilidad.</p>
+        
+        <h2>Hoja de Estilo Accesible</h2>
+        <p>Esta página permite a los usuarios activar una hoja de estilo accesible que mejora la legibilidad y navegabilidad del contenido.</p>
+        
+    </main>
+    <!--************************************************************************************-->
+    <aside contenteditable="false">
+        <aside id="login" class="modal" >
+            <form action="index2.html" class="modal-content animate">
+                <section id="seccion">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <fieldset>  
+                    <legend>DATOS DE ACCESO</legend>  
+                    <h3> INICIAR SESIÓN </h3>
+                                      
+                    <!-- <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
+                        <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
+                        <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>-->
+                        
+                            <p>
+                                <label for="email">Email: </label>
+                                <input type="email" id="email" name="email" ><!--required-->
+                            </p>
+                            <p>
+                                <label for="pass">Contraseña: </label>
+                                <input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" ><!--required-->
+                            </p>
+                        
+                        <button type="submit">Inicar sesión</button>
+                        <p>
+                            <label><input type="checkbox" checked="checked" name="remember"> Recordar</label>
+                        </p>
+                        <p>
+                            <span class="psw">Olvidaste tu<a href="#">contraseña?</a></span>
+                        </p>
+                    </fieldset>  
+                </section>
+            </form> 
+        </aside>
+    </aside>
+    <!--************************************************************************************-->
+    <aside contenteditable="false">
+        <aside id="registro" class="modal2">
+            <form action="index.html" class="modal2-content animate">
+                <section id="seccion2">
+                    <fieldset>  
+                        <legend>TUS DATOS</legend>  
+                        <h3> REGISTRO </h3>
+                            <p>Introduce tus datos</p>
+                            <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" ></p><!--required-->
+                            <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" ></label></p><!--required-->
+                            <p><label for="pass_reg">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass_reg" name="pass_reg" ></p><!--required-->
+                            <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" ></p><!--required-->
+                            <p><label for="email_reg">Email: </label><input type="email" id="email_reg" name="email_reg" ></p><!--required-->
+                            <p>Sexo:</p>
+                                <input type="radio" id="masculino" name="sexo" value="H"> 
+                                <label for="masculino">H</label>
+                                <input type="radio" id="femenino"  name="sexo" value="M"> 
+                                <label for="femenino">M</label>
+                            <p><label for="fecha1">Fecha de nacimiento:</label>
+                            <input type="date" id="fecha1" name="fecha1"></p>
+                            <p><label for="ciudad">Ciudad: </label>
+                                <select id="ciudad" name="ciudad">
+                                    <option value="1">Alicante</option>
+                                    <option value="33">Madrid</option>
+                                    <option value="40">Valencia</option>
+                                </select>
+                            </p>
+                            <p><label for="pais">País: </label>
+                                <select id="pais" name="pais">
+                                    <option value="1">Alemania</option>
+                                    <option value="33">España</option>
+                                    <option value="40">Francia</option>
+                                </select>
+                            </p> 
+                    </fieldset>   
+                </section>
+                <section id="foto">
+                    <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <fieldset>   
+                        <legend>TU FOTO</legend> 
+                            <h4>Foto:</h4>
+                            <label for="input-image"></label> 
+                                <figure>
+                                    <img src="./imagenes/user1.jpg" alt="imagen">
+                                </figure> 
+                            <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
+                    </fieldset>     
+                </section>
+                <aside id="log">
+                    <input type="submit" value="Registrarse">
+                </aside>   
+            </form> 
+        </aside>
+    </aside>
+    <!--************************************************************************************-->
+    <footer>
+        <p>&copy;
+            <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
+            <abbr title = "DAW"> Practica 4 </abbr>
+        </p>
+    </footer> 
+    <script>
+        scroll();
+        login();
+        registro();
+    </script>
+</body>
+</html>

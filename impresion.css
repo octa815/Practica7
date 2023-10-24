@@ -10,7 +10,7 @@ REQUISITOS DE LA IMPRESIÓN
 
 - Elimina los elementos que no sean esenciales, como las imágenes. Pero a veces las imágenes sí que
   son muy importantes: elimina las imágenes que sean meramente decorativas, pero las imágenes que
-  transmitan información importante o sean el contenido principal hay que mantenerlas.
+  transmitan información importante o sean el contenido principal hay que mantenerlas. DONE
 
 - Elimina los elementos de navegación (por ejemplo, la barra de navegación). DONE
 
@@ -20,7 +20,7 @@ REQUISITOS DE LA IMPRESIÓN
 
 - Incluye el URL de la página. DONE arriba a la izquierda
 
-- Incluye un aviso sobre los derechos de uso (copyright).
+- Incluye un aviso sobre los derechos de uso (copyright). DONE
 
 - Usa las reglas específicas para impresión, como @page, page-break-before, widows y orphans. ¿?¿?¿?¿?
 
@@ -37,6 +37,11 @@ body{
 a{
     text-decoration: underline; /* Subrayado para impresión */
     color: #000; /* Color negro para impresión*/
+}
+a::after {
+    content: " (" attr(data-link) ")"; /* Mostrar la URL almacenada en data-link */
+    font-size: 14px; /* Tamaño del texto de la URL */
+    color: #1700e4; /* Color del texto de la URL*/
 }
 
 img{
@@ -59,7 +64,7 @@ fieldset>legend{
 
 
 
-header,footer,#login,#registro{
+header,#login,#registro{
     display: none;
 }
 

@@ -41,17 +41,25 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                 <figure>
                     <img src="./imagenes/knekro1.png" alt="usu" id="usuario">
-                    <figcaption>Usuario: Knekro</figcaption>
+                    <figcaption class="icon-user-circle-o">Usuario: Knekro</figcaption>
                 </figure>
-                <a href="index2.html" class="icon-search">Mis álbumes</a>
-                <a href="index2.html" class="icon-doc-new">Crear álbum</a>
-                <a href="solicitar_album.html" class="icon-search">Solicitar álbum</a>
+                <a href="index2.html" class="icon-doc-text">Mis datos</a>
+                <a href="index2.html" class="icon-folder-open-empty-1">Mis álbumes</a>
+                <a href="index2.html" class="icon-folder-add">Crear álbum</a>
+                <a href="solicitar_album.html" class="icon-edit">Solicitar álbum</a>
                 <a href="index.html" class="icon-trash-empty">Darme de baja</a>
-                <a href="index.html" class="icon-logout">Cerrar sesión</a> 
+                <a href="index.html" class="icon-logout">Cerrar sesión</a>  
                 <a class="icon-moon">claro/oscuro</a>
                 <aside id="darkbot">
                     <label class="switch">
                         <input type="checkbox" onclick="oscuro()">
+                        <span class="slider round"></span>
+                    </label> 
+                </aside> 
+                <a class="icon-fontsize">Letra</a>
+                <aside id="darkbot">
+                    <label class="switch">
+                        <input type="checkbox" onclick="grande()">
                         <span class="slider round"></span>
                     </label> 
                 </aside>     
@@ -136,6 +144,7 @@
                         <label for="cp">CP: </label>
                         <input type="text" id="cp" name="cp" maxlength="5" placeholder="CP" size="6" >
                     
+                        <label for="ciudad">Ciudad </label>
                         <select id="ciudad" name="ciudad">
                             <option value="" disabled selected hidden>Localidad</option>
                             <option value="1">Alicante</option>
@@ -143,7 +152,7 @@
                             <option value="40">Valencia</option>
                         </select>
                     
-                        <label for="provincia"> </label>
+                        <label for="provincia">Provincia </label>
                             <select id="provincia" name="provincia">
                                 <option value="" disabled selected hidden>Provincia</option>
                                 <option value="1">Valencia</option>
@@ -207,7 +216,10 @@
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
             <abbr title = "DAW"> Practica 5 </abbr>
         </p>
-    </footer>
+        <p>
+            <a href="accesibilidad.html" class="icon-universal-access"><span>Accesibilidad</span></a>
+        </p>
+    </footer> 
     <script>
         login();
         registro();

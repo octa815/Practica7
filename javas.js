@@ -50,6 +50,11 @@ function oscuro() {
   var element = document.body;
   element.classList.toggle("dark-mode");
 }
+
+function grande() {
+  var element = document.body;
+  element.classList.toggle("grande-mode");
+}
   
 
 

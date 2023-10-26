@@ -1,3 +1,7 @@
+ a:hover{
+    color:yellow;
+ }
+ 
  /* BOTON SLIDER */
  #darkbot{
     display:flex;
@@ -113,10 +117,16 @@ body{
     animation: transitionIn 1s;
 }
 
+/*MODOS------------------------------------*/
 .dark-mode {
     background: linear-gradient(rgb(0, 0, 0), #454845);
     color: white;
-  }
+}
+
+.grande-mode {
+    font-size: 120%; 
+    line-height: 1.8;
+}
 
 #botbus{
     display: flex;
@@ -551,6 +561,11 @@ h3{
 
 #chkMenu:checked+ul {
     max-height: 14em;
+}
+
+body>footer{
+    display: flex;
+    justify-content: space-around;
 }
 
 body>footer>p{

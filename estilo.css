@@ -1,17 +1,23 @@
+ .botoncillo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ 
  a:hover{
     color:yellow;
  }
  
  /* BOTON SLIDER */
- #darkbot{
+ .darkbot{
     display:flex;
     justify-content: space-around;
  }
  .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 50px;
+    height: 24px;
   }
   
   /* Hide default HTML checkbox */
@@ -37,10 +43,10 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -415,7 +421,7 @@ aside>ul>li>a:hover{
 .lateral a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;

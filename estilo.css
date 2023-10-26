@@ -191,8 +191,13 @@ figure{
 }
 
 #secundaria>aside>figure>a>img:hover{
+    content: attr(alt);
     transform: scale(1.1);
     transition: transform 1s;
+}
+#secundaria>aside>figure>a>img:hover::after{
+    content: attr(alt);
+
 }
 
 #resultados-busqueda>aside{

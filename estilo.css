@@ -102,7 +102,7 @@ main{
 }
 body{
     min-height: 100vh;
-    min-width: 400px;  
+    min-width: 375px;  
     /*background-color: linear-gradient(rgb(45, 162, 10), #0b0b0a);*/
     background: linear-gradient(rgb(255, 255, 255), #4b4d4b);
     display:grid;
@@ -578,7 +578,7 @@ input{
 
 /*MEDIAQUERIES*/
 
-@media ( min-width: 360px){
+@media ( min-width: 350px){
 
     #menu>ul>li{
         display:inline-block;
@@ -663,7 +663,7 @@ input{
 
 }
 
-@media ( min-width: 540px){
+@media ( min-width: 553px){
     #menu>ul>li>a>span{
         display: inline-block;
         padding: .60em;

@@ -1,7 +1,7 @@
 
 @import "estilo.css";
 
-body{
-    font-size: 12pt;
+main,nav{
+    font-size: 30px;
 }
 

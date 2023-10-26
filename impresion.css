@@ -28,9 +28,21 @@ REQUISITOS DE LA IMPRESIÓN
 
 
 */
+@page {
+    margin: 2cm;
+    size: A4;
+}
+h4{ /*siempre habrá un salto de página antes de cada título <h2> cuando se imprima el documento.*/
+    page-break-before: always;
+}
+
+p{
+    widows: 2;
+    orphans: 2;
+}
 
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: serif;
     font-size: 12pt;
 
 }

@@ -12,6 +12,7 @@
  .darkbot{
     display:flex;
     justify-content: space-around;
+    padding:.5em;
  }
  .switch {
     position: relative;

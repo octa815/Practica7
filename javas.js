@@ -39,7 +39,7 @@ function registro(){
 
 
 function openNav() {
-  document.getElementById("panel").style.width = "250px";
+  document.getElementById("panel").style.width = "300px";
 }
   
 function closeNav() {

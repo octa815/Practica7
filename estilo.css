@@ -114,13 +114,14 @@ html{
 main{
     padding-left: 5%;
     padding-right: 5%;
-
 }
 body{
     min-height: 100vh;
     min-width: 375px;  
     /*background-color: linear-gradient(rgb(45, 162, 10), #0b0b0a);*/
-    background: linear-gradient(rgb(255, 255, 255), #4b4d4b);
+    background-image: url("./imagenes//blanco.jpeg");
+    background-size: cover;
+    /*background: linear-gradient(rgb(255, 255, 255), #4b4d4b);*/
     display:grid;
     grid-template-rows: auto auto 1fr auto;
     margin:0%;
@@ -168,8 +169,9 @@ table, tr, th, td {
 
 
 fieldset{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    background-color: #eeeeee;
     justify-content: flex-start;
-    
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
@@ -183,6 +185,7 @@ legend{
 }
 
 img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
     max-width: 100%;
     max-height: 100%;
     border-radius: 1em;

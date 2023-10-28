@@ -76,10 +76,9 @@ fieldset>legend{
 
 
 
-header,#login,#registro,#accesibilidad{
+header,#login,#registro{
     display: none;
 }
-
 
 
 

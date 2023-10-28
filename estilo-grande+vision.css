@@ -4,7 +4,7 @@
 body {
     background: #fff; /* Fondo blanco */
     color: #333; /* Texto oscuro para mayor contraste */
-    font-size: 150%; /* Tamaño de fuente aumentado */
+    font-size: 18px; /* Tamaño de fuente aumentado */
     line-height: 1.6; /* Espaciado entre líneas para una mejor legibilidad */
     font-family: 'Atkinson Hyperlegible', sans-serif;
     

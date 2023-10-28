@@ -194,6 +194,7 @@ function $(id) {
   return document.getElementById(id);
   }
   function metodo1() {
+
     var tabla = document.createElement("table");
     var titulo = tabla.createCaption();
       titulo.textContent = $("filas").value + " x " + $("columnas").value;
@@ -201,11 +202,10 @@ function $(id) {
         var fila = tabla.insertRow();
         for(c = 0; c < $("columnas").value; c++) {
           var celda = fila.insertCell();
-
-          celda.textContent = Math.random().toFixed(2);
+          celda.textContent = Math.random().toFixed(2) + "€";
         }
-      }
-      document.getElementById("tarifas").appendChild(tabla);
+      } 
+    document.getElementById("tarifas").appendChild(tabla);
   }
 
 

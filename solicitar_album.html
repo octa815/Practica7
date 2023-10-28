@@ -117,6 +117,16 @@
                         <td>0.02 € por foto</td>
                     </tr>    
             </table>
+            <p>Filas: 
+                <input type="number" id="filas" value="1" min="1" />
+            </p>
+            <p>Columnas: 
+                <input type="number" id="columnas" value="1" min="1" />
+            </p>
+            <p>
+                <input type="button" value="Método 1" id="metodo1" /> 
+            </p>
+            
         </fieldset>
         <fieldset id="formulario">
             <legend>Formulario de solicitud</legend>
@@ -215,6 +225,10 @@
             </form>  
         </fieldset>
     </main>
+    <script>
+        metodo1();
+    </script>
+   
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
@@ -224,9 +238,5 @@
             <a href="accesibilidad.html" class="icon-universal-access"><span>Accesibilidad</span></a>
         </p>
     </footer> 
-    <script>
-        login();
-        registro();
-    </script>
 </body>
 </html>

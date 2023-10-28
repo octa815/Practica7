@@ -55,10 +55,10 @@ function grande() {
   element.classList.toggle("grande-mode");
 }
   
-/*---------------FUNCIONES FORMULARIOS Y TABLA---------------------*/
+/*---------------FUNCIONES FORMULARIOS Y TABLA----------------------------------------------------------------------------*/
 
 
-/*VALIDAR LOGIN-----------------------------------------------------*/
+/*VALIDAR LOGIN-----------------------------------------------------------------------------------------------------------*/
 function validaLogin(event) {
   
   var ok = true;
@@ -91,7 +91,7 @@ function validaLogin(event) {
     alert("Todo correcto, se envía el formulario");
   }
 }
-/*VALIDAR REGISTRO-----------------------------------------------*/
+/*VALIDAR REGISTRO--------------------------------------------------------------------------------------------------------*/
 
 function validaRegistro(event) {
   
@@ -157,8 +157,6 @@ function validaRegistro(event) {
     errorSexo.textContent = '';
   }
 
-  
-
   if (!val_fecha.test(fecha)) {
     errorFecha.textContent = 'Formato fecha incorrecto';
     ok = false;
@@ -191,11 +189,31 @@ function validaRegistro(event) {
   }
 }
 
+/*CREAR TABLAS-------------------------------------------------------------------------------------------------------*/
+function $(id) {
+  return document.getElementById(id);
+  }
+  function metodo1() {
+    var tabla = document.createElement("table");
+    var titulo = tabla.createCaption();
+      titulo.textContent = $("filas").value + " x " + $("columnas").value;
+      for(f = 0; f < $("filas").value; f++) {
+        var fila = tabla.insertRow();
+        for(c = 0; c < $("columnas").value; c++) {
+          var celda = fila.insertCell();
+
+          celda.textContent = Math.random().toFixed(2);
+        }
+      }
+      document.getElementById("tarifas").appendChild(tabla);
+  }
+
+
+/*CARGAR--------------------------------------------------------------------------------------------------------------*/
 
 function load() {
   document.getElementsByName('loginForm')[0].addEventListener("submit", validaLogin);
   document.getElementsByName('registroForm')[0].addEventListener("submit", validaRegistro);
+  $("metodo1").addEventListener("click", metodo1);
 }
-
-
 document.addEventListener("DOMContentLoaded", load, false);

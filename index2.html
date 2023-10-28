@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <title>Álbumnes de fotos Sunegami</title>
+    <meta name="description" content="Crea tus propios albumnes de fotos"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css"media="screen" title="Modo principal">
     
-    <!-- Modos de la página -->
-    <link rel="alternate stylesheet" href="estilo-oscuro.css" title="Modo oscuro">
-    <link rel="alternate stylesheet" href="estilo-grande.css" title="Modo grande">
+   <!--Letra accesible-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+   
+   <!-- Modos de la página -->
+   <link rel="alternate stylesheet" href="estilo-oscuro.css" title="Modo oscuro">
+   <link rel="alternate stylesheet" href="estilo-grande.css" title="Modo grande">
+   <link rel="alternate stylesheet" href="estilo-accesible.css" title="Modo accesible">
+   <link rel="alternate stylesheet" href="alto-contraste.css" title="Modo alto contraste">
+   <link rel="alternate stylesheet" href="estilo-grande+vision.css" title="Modo grande+vision">
     
     <link rel="stylesheet" href ="impresion.css" media="print">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
@@ -30,21 +40,32 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                 <figure>
                     <img src="./imagenes/knekro1.png" alt="usu" id="usuario">
-                    <figcaption>Usuario: Knekro</figcaption>
+                    <figcaption class="icon-user-circle-o">Usuario: Knekro</figcaption>
                 </figure>
-                <a href="index2.html" class="icon-doc-new">Mis datos</a>
-                <a href="index2.html" class="icon-search">Mis álbumes</a>
-                <a href="index2.html" class="icon-doc-new">Crear álbum</a>
-                <a href="solicitar_album.html" class="icon-search">Solicitar álbum</a>
+                <a href="index2.html" class="icon-doc-text">Mis datos</a>
+                <a href="index2.html" class="icon-folder-open-empty-1">Mis álbumes</a>
+                <a href="index2.html" class="icon-folder-add">Crear álbum</a>
+                <a href="solicitar_album.html" class="icon-edit">Solicitar álbum</a>
                 <a href="index.html" class="icon-trash-empty">Darme de baja</a>
                 <a href="index.html" class="icon-logout">Cerrar sesión</a>  
-                <a class="icon-moon">claro/oscuro</a>
-                <aside id="darkbot">
-                    <label class="switch">
-                        <input type="checkbox" onclick="oscuro()">
-                        <span class="slider round"></span>
-                    </label> 
-                </aside> 
+                <aside class="botoncillo">
+                    <a class="icon-moon">claro/oscuro</a>
+                      <aside class="darkbot">
+                        <label class="switch">
+                            <input type="checkbox" onclick="oscuro()">
+                            <span class="slider round"></span>
+                        </label> 
+                    </aside> 
+                </aside>
+                <aside class="botoncillo">
+                    <a class="icon-fontsize">Letra</a>
+                    <aside class="darkbot">
+                        <label class="switch">
+                            <input type="checkbox" onclick="grande()">
+                            <span class="slider round"></span>
+                        </label> 
+                    </aside> 
+                </aside>
             </aside>             
         </aside> 
         <nav id="menu"> 
@@ -53,7 +74,7 @@
             <ul>
                 <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
                 <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
-                <li><a href="solicitar_album.html" class="icon-search"><span>Solictar álbum</span></a></li>
+                <li><a href="solicitar_album.html" class="icon-doc-add"><span>Solictar álbum</span></a></li>
                 <li><a href="index.html" class="icon-logout"><span>Cerrar sesión</span></a></li>                  
             </ul>   
         </nav>   
@@ -84,7 +105,7 @@
                     <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
                     <footer>
                         <div>
-                            <p class="icon-female">País</p>
+                            <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
                         </div> 
                     </footer>
@@ -94,7 +115,7 @@
                     <a href="detalle.html"><img src="./imagenes/gorra.png" alt="imagen"></a>
                     <footer>
                         <div>
-                            <p class="icon-female">País</p>
+                            <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
                         </div> 
                     </footer>
@@ -104,7 +125,7 @@
                     <a href="detalle.html"><img src="./imagenes/horda.jpg" alt="imagen"></a>
                     <footer>
                         <div>
-                            <p class="icon-female">País</p>
+                            <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
                         </div> 
                     </footer>
@@ -116,9 +137,12 @@
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
-            <abbr title = "DAW"> Practica 4 </abbr>
+            <abbr title = "DAW"> Practica 5 </abbr>
         </p>
-    </footer>
+        <p>
+            <a href="accesibilidad.html" class="icon-universal-access"><span>Accesibilidad</span></a>
+        </p>
+    </footer> 
     <script>
         scroll();
     </script> 

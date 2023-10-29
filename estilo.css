@@ -200,6 +200,8 @@ fieldset{
 }
 
 legend{
+    border-radius: 5px;
+    background: #1bc30c;
     font-weight: bold;
     text-align: left;
 }

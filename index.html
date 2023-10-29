@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <title>Álbumnes de fotos Sunegami</title>
+    <meta name="description" content="Crea tus propios albumnes de fotos"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css" media="screen" title="Modo principal">
+
+    <!--Letra accesible-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
     
     <!-- Modos de la página -->
     <link rel="alternate stylesheet" href="estilo-oscuro.css" title="Modo oscuro">
     <link rel="alternate stylesheet" href="estilo-grande.css" title="Modo grande">
+    <link rel="alternate stylesheet" href="estilo-accesible.css" title="Modo accesible">
+    <link rel="alternate stylesheet" href="alto-contraste.css" title="Modo alto contraste">
+    <link rel="alternate stylesheet" href="estilo-grande+vision.css" title="Modo grande+vision">
+    
+
 
     <link rel="stylesheet" href ="impresion.css" media="print">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
@@ -41,6 +53,7 @@
             <ul>
                 <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
                 <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+                <li><a href="accesibilidad.html" class="icon-universal-access"><span>Accesibilidad</span></a></li>
             </ul>
         </nav>       
     </header>
@@ -58,10 +71,11 @@
                     <img src="./imagenes/images.jpg" alt="imagen" class="imagenes">
                 </a>
                 <footer>
-                    <div>
+                    <fieldset>
+                        <legend>Usuario</legend>
                         <p class="icon-globe">País</p>
                         <p class="icon-calendar">Fecha: 2023-09-25</p>
-                    </div>  
+                    </fieldset>  
                 </footer>
             </article>
         </section>
@@ -70,62 +84,68 @@
             <aside>
                 <figure>
                     <h4 title="Foto 2">Foto 2</h4>
-                    <a href="mensaje_error.html"><img src="./imagenes/gorra.png" alt="imagen"></a>
+                    <a href="mensaje_error.html"><img src="./imagenes/gorra.png" title="MenosTrece" alt="imagen"></a>
                     <footer>
-                        <div>
+                        <fieldset>
+                            <legend>Usuario</legend>
                             <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </div> 
+                        </fieldset> 
                     </footer>
                 </figure>
                 <figure>
                     <h4 title="Foto 3">Foto 3</h4>
-                    <a href="mensaje_error.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                    <a href="mensaje_error.html"><img src="./imagenes/muradin.jpg" title="Murdin" alt="imagen"></a>
                     <footer>
-                        <div>
+                        <fieldset>
+                            <legend>Usuario</legend>
                             <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </div> 
+                        </fieldset> 
                     </footer>
                 </figure>
                 <figure>
                     <h4 title="Foto 4">Foto 4</h4>
                     <a href="mensaje_error.html"><img src="./imagenes/horda.jpg" alt="imagen"></a>
                     <footer>
-                        <div>
+                        <fieldset>
+                            <legend>Usuario</legend>
                             <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </div> 
+                        </fieldset> 
                     </footer>
                 </figure>
                 <figure>
                     <h4 title="Foto 2">Foto 2</h4>
                     <a href="mensaje_error.html"><img src="./imagenes/taj.jpeg" alt="imagen"></a>
                     <footer>
-                        <div>
+                        <fieldset>
+                            <legend>Usuario</legend>
                             <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </div> 
+                        </fieldset> 
                     </footer>
                 </figure>
                 <figure>
                     <h4 title="Foto 2">Foto 2</h4>
                     <a href="mensaje_error.html"><img src="./imagenes/dia4.jpg" alt="imagen"></a>
                     <footer>
-                        <div>
+                        <fieldset>
+                            <legend>Usuario</legend>
                             <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </div> 
+                        </fieldset> 
                     </footer>
                 </figure>
                 <figure>
                     <h4 title="Foto 2">Foto 2</h4>
                     <a href="mensaje_error.html"><img src="./imagenes/images.jpg" alt="imagen"></a>
                     <footer>
-                        <div>
+                        <fieldset>
+                            <legend>Usuario</legend>
                             <p class="icon-globe">País</p>
                             <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </div> 
+                        </fieldset> 
                     </footer>
                 </figure>
             </aside>
@@ -134,7 +154,7 @@
     <!--************************************************************************************-->
     <aside contenteditable="false">
         <aside id="login" class="modal" >
-            <form action="index2.html" class="modal-content animate">
+            <form action="index2.html" class="modal-content animate" name="loginForm">
                 <section id="seccion">
                 <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <fieldset>  
@@ -146,15 +166,18 @@
                         <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>-->
                         
                             <p>
-                                <label for="email">Email: </label>
-                                <input type="email" id="email" name="email" ><!--required-->
+                                <label for="nombre">Nombre: </label>
+                                <input type="text" id="nombre" name="nombre">
+                                <span id="errorNombreUsuario" class="error"></span>
                             </p>
                             <p>
                                 <label for="pass">Contraseña: </label>
-                                <input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" ><!--required-->
+                                <input type="text" id="pass" name="pass">
+                                <span id="errorPass" class="error"></span>
                             </p>
                         
                         <button type="submit">Inicar sesión</button>
+                        <button type="reset">borrar</button>
                         <p>
                             <label><input type="checkbox" checked="checked" name="remember"> Recordar</label>
                         </p>
@@ -169,25 +192,49 @@
     <!--************************************************************************************-->
     <aside contenteditable="false">
         <aside id="registro" class="modal2">
-            <form action="index.html" class="modal2-content animate">
+            <form action="index.html" class="modal2-content animate" name="registroForm">
                 <section id="seccion2">
                     <fieldset>  
                         <legend>TUS DATOS</legend>  
                         <h3> REGISTRO </h3>
                             <p>Introduce tus datos</p>
-                            <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" ></p><!--required-->
-                            <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" ></label></p><!--required-->
-                            <p><label for="pass_reg">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass_reg" name="pass_reg" ></p><!--required-->
-                            <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" ></p><!--required-->
-                            <p><label for="email_reg">Email: </label><input type="email" id="email_reg" name="email_reg" ></p><!--required-->
-                            <p>Sexo:</p>
-                                <input type="radio" id="masculino" name="sexo" value="H"> 
+                            <p><label for="nombre_reg">Nombre:</label>
+                                <input type="text" id="nombre_reg" name="nombre_reg">
+                                <span id="errorNombre_reg" class="error"></span>
+                            </p>
+                            <p>
+                                <label>Apellidos: </label>
+                                <input type="text" id="apellidos" name="apellidos" >
+                            </p>
+                            <p>
+                                <label for="pass_reg">Contraseña: </label>
+                                <input type="text"  id="pass_reg" name="pass_reg" >
+                                <span id="errorPass_reg" class="error"></span>
+                            </p>
+                            <p>
+                                <label for="pass2"> Repite contraseña: </label>
+                                <input type="text"  id="pass2" name="pass2">
+                                <span id="errorPass2" class="error"></span>
+                            </p>
+                            <p><label for="email_reg">Email: </label>
+                                <input type="text" id="email_reg" name="email_reg" >
+                                <span id="errorMail_reg" class="error"></span>
+                            </p>
+                            <p>Sexo:
+                                <input type="radio" id="masculino" name="sexo" > 
                                 <label for="masculino">H</label>
-                                <input type="radio" id="femenino"  name="sexo" value="M"> 
+                                <input type="radio" id="femenino"  name="sexo"> 
                                 <label for="femenino">M</label>
-                            <p><label for="fecha1">Fecha de nacimiento:</label>
-                            <input type="date" id="fecha1" name="fecha1"></p>
-                            <p><label for="ciudad">Ciudad: </label>
+                                <span id="errorSexo_reg" class="error"></span>
+                            </p>
+                            <p>
+                                <label for="fecha1">Fecha de nacimiento:</label>
+                                <input type="text" id="fecha1" name="fecha1">
+                                <span id="errorFecha_reg" class="error"></span>
+                                <span id="errorNac_reg" class="error"></span>
+                            </p>
+                            <p>
+                                <label for="ciudad">Ciudad: </label>
                                 <select id="ciudad" name="ciudad">
                                     <option value="1">Alicante</option>
                                     <option value="33">Madrid</option>
@@ -213,11 +260,13 @@
                                     <img src="./imagenes/user1.jpg" alt="imagen">
                                 </figure> 
                             <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
-                    </fieldset>     
+                    </fieldset> 
+                    <aside id="log">
+                        <button type="submit">registrarse</button>
+                        <button type="reset">borrar</button>
+                    </aside>       
                 </section>
-                <aside id="log">
-                    <input type="submit" value="Registrarse">
-                </aside>   
+               
             </form> 
         </aside>
     </aside>
@@ -225,7 +274,10 @@
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
-            <abbr title = "DAW"> Practica 4 </abbr>
+            <abbr title = "DAW"> Practica 5 </abbr>
+        </p>
+        <p>
+            <a href="accesibilidad.html" class="icon-universal-access"><span>Accesibilidad</span></a>
         </p>
     </footer> 
     <script>

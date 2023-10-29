@@ -1,13 +1,29 @@
+.error {
+    color: red;
+    font-size: 0.8em;
+  }
+ 
+ .botoncillo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ 
+ a:hover{
+    color:yellow;
+ }
+ 
  /* BOTON SLIDER */
- #darkbot{
+ .darkbot{
     display:flex;
     justify-content: space-around;
+    padding:.5em;
  }
  .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 50px;
+    height: 24px;
   }
   
   /* Hide default HTML checkbox */
@@ -33,10 +49,10 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -98,13 +114,14 @@ html{
 main{
     padding-left: 5%;
     padding-right: 5%;
-
 }
 body{
     min-height: 100vh;
-    min-width: 400px;  
+    min-width: 375px;  
     /*background-color: linear-gradient(rgb(45, 162, 10), #0b0b0a);*/
-    background: linear-gradient(rgb(255, 255, 255), #4b4d4b);
+    background-image: url("./imagenes//blanco.jpeg");
+    background-size: cover;
+    /*background: linear-gradient(rgb(255, 255, 255), #4b4d4b);*/
     display:grid;
     grid-template-rows: auto auto 1fr auto;
     margin:0%;
@@ -113,10 +130,31 @@ body{
     animation: transitionIn 1s;
 }
 
+
+/*MODOS------------------------------------*/
 .dark-mode {
-    background: linear-gradient(rgb(0, 0, 0), #454845);
+    background-image: url("./imagenes//black.jpg");
+    background-size: cover;
+   /* background: linear-gradient(rgb(0, 0, 0), #454845);*/
     color: white;
-  }
+    fieldset{
+        border-radius: 8px;
+        border: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+        background-color: #2c2a2a;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+        flex-wrap: wrap;
+        padding: 2em;
+    }
+}
+
+.grande-mode {
+    font-size: 120%; 
+    line-height: 1.8;
+}
 
 #botbus{
     display: flex;
@@ -144,19 +182,18 @@ table, tr, th, td {
     border: 1px solid black;
 }
 
-table{
-    display: flex;
-    justify-content: space-around;
-}
 
 fieldset{
+    border-radius: 8px;
+    border: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    background-color: #eeeeee;
     justify-content: flex-start;
-    
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
     flex-wrap: wrap;
-    padding: 2em;
+    padding: .5em;
 }
 
 legend{
@@ -165,6 +202,7 @@ legend{
 }
 
 img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
     max-width: 100%;
     max-height: 100%;
     border-radius: 1em;
@@ -185,14 +223,19 @@ figure{
 #secundaria>aside>figure>a>img{
     width: 100%;
     height: 12em;
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
     cursor: pointer;
 }
 
 #secundaria>aside>figure>a>img:hover{
+    content: attr(alt);
     transform: scale(1.1);
     transition: transform 1s;
+}
+#secundaria>aside>figure>a>img:hover::after{
+    content: attr(alt);
+
 }
 
 #resultados-busqueda>aside{
@@ -206,7 +249,7 @@ figure{
 #resultados-busqueda>aside>figure>a>img{
     width: 100%;
     height: 15em;
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
     cursor: pointer;
 }
@@ -400,7 +443,7 @@ aside>ul>li>a:hover{
 .lateral a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -430,7 +473,7 @@ aside>ul>li>a:hover{
 /*FORMULARIO ALBUMNES*/
 #mainalbum{
     display: grid;
-    grid-template-areas: "intro intro" "tarifas formulario";
+    grid-template-areas: "intro intro intro" "tarifas formulario formulario";
 }
 
 #intro{
@@ -439,7 +482,8 @@ aside>ul>li>a:hover{
 }
 
 #tarifas{
-    display: block;
+    align-content: stretch;
+    display: flex;
     grid-area: tarifas;
     margin:2em
 }
@@ -548,6 +592,11 @@ h3{
     max-height: 14em;
 }
 
+body>footer{
+    display: flex;
+    justify-content: space-around;
+}
+
 body>footer>p{
     display:flex;
     flex-direction: row;
@@ -573,7 +622,7 @@ input{
 
 /*MEDIAQUERIES*/
 
-@media ( min-width: 360px){
+@media ( min-width: 350px){
 
     #menu>ul>li{
         display:inline-block;
@@ -658,7 +707,7 @@ input{
 
 }
 
-@media ( min-width: 540px){
+@media ( min-width: 553px){
     #menu>ul>li>a>span{
         display: inline-block;
         padding: .60em;

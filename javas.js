@@ -243,22 +243,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function calculateCost() {
     // Obtén los valores de los elementos y los conviertes a números (si es necesario)
-    const numCopias = parseFloat(copiasInput.value);
+    const numCopias = parseInt(copiasInput.value);
     const impresionColor = impresionCheckbox.checked;
     const resolucion = parseFloat(resolucionInput.value);
     const numFotos = parseFloat(fotosInput.value);
 
     // Realizar cálculos basados en los valores del formulario
     let costoTotal = 0;
+    console.log(numCopias);
+    console.log(impresionColor);
+    console.log(resolucion);
+    console.log(numFotos);
 
-    if (numCopias > 0 && numCopias <= 5) {
+    if (numCopias > 0 && numCopias <=4){
       costoTotal += numCopias * 0.10;
-    } else if (numCopias >= 5 && numCopias <= 11) {
+    } 
+    else if (numCopias == 5){
       costoTotal += numCopias * 0.08;
-    } else if (numCopias > 11) {
+    }
+    else if (numCopias > 11){
       costoTotal += numCopias * 0.07;
     }
-
     if (impresionColor) {
       costoTotal += numFotos * 0.05;
     }
@@ -268,6 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Muestra el costo total en el elemento HTML
     costoElement.textContent = `Costo Total: ${costoTotal.toFixed(2)} €`;
+    
   }
   
 });

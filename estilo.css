@@ -147,7 +147,10 @@ body{
         flex-wrap: wrap;
         align-content: space-around;
         flex-wrap: wrap;
-        padding: 2em;
+        padding: .5em;
+    }
+    table, tr, th, td {
+        border: 1px solid white;
     }
 }
 

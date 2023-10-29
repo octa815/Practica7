@@ -72,14 +72,14 @@ function validaLogin(event) {
   var errorPass = document.getElementById('errorPass');
 
   if (nombre == "") {
-    errorNombre.textContent='el usuario es erroneo';
+    errorNombre.textContent='El usuario es erroneo';
     ok = false;
   }else{
     errorNombre.textContent='';
   }
 
   if (pass == "") {
-    errorPass.textContent='necesitas introducir password';
+    errorPass.textContent='Necesitas introducir password';
     ok = false;
   }else{
     errorPass.textContent='';
@@ -123,28 +123,28 @@ function validaRegistro(event) {
   var errorNac = document.getElementById('errorNac_reg');
 
   if(!val_nombre.test(nombre)){
-    errorNombre.textContent='necesitas introducir nombre';
+    errorNombre.textContent='Necesitas introducir nombre';
     ok = false;
   }else{
     errorNombre.textContent='';
   }
 
   if (!val_pass.test(pass) ) {
-    errorPass.textContent='necesitas introducir password';
+    errorPass.textContent='Necesitas introducir password';
     ok = false;
   }else{
     errorPass.textContent='';
   }
 
   if (rep_pass != pass ) {
-    errorPass2.textContent='no coicide con contraseña';
+    errorPass2.textContent='No coicide con contraseña';
     ok = false;
   }else{
     errorPass2.textContent='';
   }
 
   if (!val_email.test(email) ) {
-    errorMail.textContent='necesitas introducir mail';
+    errorMail.textContent='Necesitas introducir mail';
     ok = false;
   }else{
     errorMail.textContent='';
@@ -217,3 +217,57 @@ function load() {
   $("metodo1").addEventListener("click", metodo1);
 }
 document.addEventListener("DOMContentLoaded", load, false);
+
+
+/*CÁLCULO--------------------------------------------------------------------------------------------------------------*/
+
+/*Cogemos los datos */
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const copiasInput = document.getElementById('copias');
+  const impresionCheckbox = document.getElementById('impresion');
+  const resolucionInput = document.getElementById('res');
+  const fotosInput = document.getElementById('numFotos');
+
+  // Asegúrate de que costoElement sea un elemento válido en tu HTML
+  const costoElement = document.getElementById('costo');
+
+  /*Detectar cambios en el formulario*/
+  copiasInput.addEventListener('input', calculateCost);
+  impresionCheckbox.addEventListener('change', calculateCost);
+  resolucionInput.addEventListener('input', calculateCost);
+  fotosInput.addEventListener('input', calculateCost);
+
+  /*Calcular el gasto*/
+
+  function calculateCost() {
+    // Obtén los valores de los elementos y los conviertes a números (si es necesario)
+    const numCopias = parseFloat(copiasInput.value);
+    const impresionColor = impresionCheckbox.checked;
+    const resolucion = parseFloat(resolucionInput.value);
+    const numFotos = parseFloat(fotosInput.value);
+
+    // Realizar cálculos basados en los valores del formulario
+    let costoTotal = 0;
+
+    if (numCopias > 0 && numCopias <= 5) {
+      costoTotal += numCopias * 0.10;
+    } else if (numCopias >= 5 && numCopias <= 11) {
+      costoTotal += numCopias * 0.08;
+    } else if (numCopias > 11) {
+      costoTotal += numCopias * 0.07;
+    }
+
+    if (impresionColor) {
+      costoTotal += numFotos * 0.05;
+    }
+    if (resolucion > 300) {
+      costoTotal += numFotos * 0.02;
+    }
+
+    // Muestra el costo total en el elemento HTML
+    costoElement.textContent = `Costo Total: ${costoTotal.toFixed(2)} €`;
+  }
+  
+});

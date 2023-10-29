@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (numCopias > 0 && numCopias <=4){
       costoTotal += numCopias * 0.10;
     } 
-    else if (numCopias == 5){
+    else if (numcopias >4 && numCopias < 11){
       costoTotal += numCopias * 0.08;
     }
     else if (numCopias > 11){

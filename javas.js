@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(resolucion);
     console.log(numFotos);
 
-    if (numCopias < 5){
+    if (numCopias >0 && numCopias < 5){
       costoTotal += numCopias * 0.10;
     } 
     else if (numCopias >4 && numCopias < 11){

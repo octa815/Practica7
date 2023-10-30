@@ -130,19 +130,21 @@
             <p>El costo total del álbum basado en los valores ingresados es:</p>
             <p id="costo">Costo Total: 0 €</p>
             <p>
-                <input type="button" value="Tabla Precios" id="calculateCost" onclick="metodo1()" /> 
+                <input type="button" value="añadir" id="agregar" onclick="anyadir()" /> 
+            </p>
+            <p>
+                <input type="button" value="borrar" id="borrar" onclick="borrar()" /> 
             </p>
             <table>
                 <tr>
-                    <th ></th>
-                    <th ></th>  
+                    <th colspan="2"></th>  
                     <th colspan="2">Blanco y negro</th>
                     <th colspan="2">color</th> 
-                    <th >COSTE TOTAL</th>
+                    <th ></th>
                 </tr>
                 <tr>
-                    <th scope="col">Número de paginas</th>
-                    <th scope="col">Número de fotos</th>  
+                    <th scope="col">Número paginas</th>
+                    <th scope="col">Número fotos</th>  
                     <th scope="col">150-300 dpi</th>
                     <th scope="col">450-900 dpi</th>
                     <th scope="col">150-300 dpi</th>
@@ -150,7 +152,9 @@
                     <th scope="col">COSTE TOTAL</th>
                 </tr>
             </table>
-           
+            <span id="mitabla">
+
+            </span> 
         </fieldset>
         <fieldset id="formulario">
             <legend>Formulario de solicitud</legend>

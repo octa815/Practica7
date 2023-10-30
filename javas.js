@@ -214,17 +214,16 @@ function $(id) {
 function load() {
   document.getElementsByName('loginForm')[0].addEventListener("submit", validaLogin);
   document.getElementsByName('registroForm')[0].addEventListener("submit", validaRegistro);
-  $("metodo1").addEventListener("click", metodo1);
 }
 document.addEventListener("DOMContentLoaded", load, false);
 
 
 /*CÁLCULO--------------------------------------------------------------------------------------------------------------*/
 
-/*Cogemos los datos */
 
-document.addEventListener('DOMContentLoaded', function() {
 
+document.addEventListener('DOMContentLoaded', function()  {
+  /*Cogemos los datos */
   const copiasInput = document.getElementById('copias');
   const impresionCheckbox = document.getElementById('impresion');
   const resolucionInput = document.getElementById('res');
@@ -238,6 +237,9 @@ document.addEventListener('DOMContentLoaded', function() {
   impresionCheckbox.addEventListener('change', calculateCost);
   resolucionInput.addEventListener('input', calculateCost);
   fotosInput.addEventListener('input', calculateCost);
+
+  
+  
 
   /*Calcular el gasto*/
 
@@ -274,9 +276,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Muestra el costo total en el elemento HTML
     costoElement.textContent = `Costo Total: ${costoTotal.toFixed(2)} €`;
   }
-  
 });
-function metodo1() {
+
+function anyadir() {
 
   var tabla = document.createElement("table");
   var titulo = tabla.createTBody();
@@ -285,9 +287,17 @@ function metodo1() {
       var fila = tabla.insertRow();
       for(c = 0; c < 7; c++) {
         var celda = fila.insertCell();
-        celda.textContent = Math.random().toFixed(2) + "€";
-        
+        celda.textContent = Math.random().toFixed(2) + "€";  
       }
     } 
-  document.getElementById("tarifas").appendChild(tabla);
+  document.getElementById("mitabla").appendChild(tabla);
   }
+
+  function borrar(){
+   let fila = document.getElementById("mitabla");
+    if (fila.hasChildNodes()) {
+      fila.removeChild(fila.lastChild);
+  }
+}
+
+

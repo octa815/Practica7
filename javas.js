@@ -193,7 +193,7 @@ function validaRegistro(event) {
 function $(id) {
   return document.getElementById(id);
   }
-  function metodo1() {
+  /*function metodo1() {
 
     var tabla = document.createElement("table");
     var titulo = tabla.createCaption();
@@ -206,7 +206,7 @@ function $(id) {
         }
       } 
     document.getElementById("tarifas").appendChild(tabla);
-  }
+  }*/
 
 
 /*CARGAR--------------------------------------------------------------------------------------------------------------*/
@@ -273,7 +273,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Muestra el costo total en el elemento HTML
     costoElement.textContent = `Costo Total: ${costoTotal.toFixed(2)} €`;
-    
   }
   
 });
+function metodo1() {
+
+  var tabla = document.createElement("table");
+  var titulo = tabla.createTBody();
+
+    for(f = 0; f < 1; f++) {
+      var fila = tabla.insertRow();
+      for(c = 0; c < 7; c++) {
+        var celda = fila.insertCell();
+        celda.textContent = Math.random().toFixed(2) + "€";
+        
+      }
+    } 
+  document.getElementById("tarifas").appendChild(tabla);
+  }

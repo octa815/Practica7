@@ -126,10 +126,31 @@
             <p>
                 <input type="button" value="Tabla Precios" id="metodo1" onClick="window.location.reload();" /> 
             </p>-->
-            <h2>Costo del Álbum</h2>
+            <h2>Costo del Álbum</h2>        
             <p>El costo total del álbum basado en los valores ingresados es:</p>
             <p id="costo">Costo Total: 0 €</p>
-            
+            <p>
+                <input type="button" value="Tabla Precios" id="calculateCost" onclick="metodo1()" /> 
+            </p>
+            <table>
+                <tr>
+                    <th ></th>
+                    <th ></th>  
+                    <th colspan="2">Blanco y negro</th>
+                    <th colspan="2">color</th> 
+                    <th >COSTE TOTAL</th>
+                </tr>
+                <tr>
+                    <th scope="col">Número de paginas</th>
+                    <th scope="col">Número de fotos</th>  
+                    <th scope="col">150-300 dpi</th>
+                    <th scope="col">450-900 dpi</th>
+                    <th scope="col">150-300 dpi</th>
+                    <th scope="col">450-900 dpi</th> 
+                    <th scope="col">COSTE TOTAL</th>
+                </tr>
+            </table>
+           
         </fieldset>
         <fieldset id="formulario">
             <legend>Formulario de solicitud</legend>
@@ -242,9 +263,5 @@
             <a href="accesibilidad.html" id="accesibilidad" class="icon-universal-access"><span>Accesibilidad</span></a>
         </p>
     </footer> 
-    <script>
-        metodo1();
-        calculateCost();
-    </script>
 </body>
 </html>

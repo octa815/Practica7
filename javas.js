@@ -255,10 +255,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(resolucion);
     console.log(numFotos);
 
-    if (numCopias > 0 && numCopias <=4){
+    if (numCopias < 5){
       costoTotal += numCopias * 0.10;
     } 
-    else if (numcopias >4 && numCopias < 11){
+    else if (numCopias >4 && numCopias < 11){
       costoTotal += numCopias * 0.08 + 0.08;
     }
     else if (numCopias >= 11){

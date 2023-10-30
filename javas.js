@@ -259,10 +259,10 @@ document.addEventListener('DOMContentLoaded', function() {
       costoTotal += numCopias * 0.10;
     } 
     else if (numcopias >4 && numCopias < 11){
-      costoTotal += numCopias * 0.08;
+      costoTotal += numCopias * 0.08 + 0.08;
     }
-    else if (numCopias > 11){
-      costoTotal += numCopias * 0.07;
+    else if (numCopias >= 11){
+      costoTotal += numCopias * 0.07 + 0.19;
     }
     if (impresionColor) {
       costoTotal += numFotos * 0.05;

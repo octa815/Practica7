@@ -262,9 +262,9 @@ function anyadir() {
   const impresionCheckbox = $('impresion');
   let impresionColor = impresionCheckbox.checked;
   if (impresionColor) {
-    $("impresion").value = "color";
+    $("impresion").value = "si";
   }else{
-    $("impresion").value = "blanco y negro";
+    $("impresion").value = "no";
   }
 
   var tabla = document.createElement("table");

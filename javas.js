@@ -56,7 +56,17 @@ function grande() {
 }
   
 /*---------------FUNCIONES FORMULARIOS Y TABLA----------------------------------------------------------------------------*/
+  function $(id) {
+  return document.getElementById(id);
+  }
 
+/*CARGAR-----------------------------------------------------------------------------------------------------------------*/
+
+function load() {
+  document.getElementsByName('loginForm')[0].addEventListener("submit", validaLogin);
+  document.getElementsByName('registroForm')[0].addEventListener("submit", validaRegistro);
+}
+document.addEventListener("DOMContentLoaded", load, false);
 
 /*VALIDAR LOGIN-----------------------------------------------------------------------------------------------------------*/
 function validaLogin(event) {
@@ -72,7 +82,7 @@ function validaLogin(event) {
   var errorPass = document.getElementById('errorPass');
 
   if (nombre == "") {
-    errorNombre.textContent='El usuario es erroneo';
+    errorNombre.textContent=' requiere nombre usuario';
     ok = false;
   }else{
     errorNombre.textContent='';
@@ -151,7 +161,7 @@ function validaRegistro(event) {
   }
 
   if (!hombre && !mujer) {
-    errorSexo.textContent = 'Por favor, selecciona un sexo.';
+    errorSexo.textContent = 'selecciona un sexo.';
     ok = false;
   } else {
     errorSexo.textContent = '';
@@ -189,41 +199,12 @@ function validaRegistro(event) {
   }
 }
 
-/*CREAR TABLAS-------------------------------------------------------------------------------------------------------*/
-function $(id) {
-  return document.getElementById(id);
-  }
-  /*function metodo1() {
-
-    var tabla = document.createElement("table");
-    var titulo = tabla.createCaption();
-      titulo.textContent = $("filas").value + " x " + $("columnas").value;
-      for(f = 0; f < $("filas").value; f++) {
-        var fila = tabla.insertRow();
-        for(c = 0; c < $("columnas").value; c++) {
-          var celda = fila.insertCell();
-          celda.textContent = Math.random().toFixed(2) + "€";
-        }
-      } 
-    document.getElementById("tarifas").appendChild(tabla);
-  }*/
-
-
-/*CARGAR--------------------------------------------------------------------------------------------------------------*/
-
-function load() {
-  document.getElementsByName('loginForm')[0].addEventListener("submit", validaLogin);
-  document.getElementsByName('registroForm')[0].addEventListener("submit", validaRegistro);
-}
-document.addEventListener("DOMContentLoaded", load, false);
-
 
 /*CÁLCULO--------------------------------------------------------------------------------------------------------------*/
 
-
-
 document.addEventListener('DOMContentLoaded', function()  {
-  /*Cogemos los datos */
+
+    /*Cogemos los datos */
   const copiasInput = document.getElementById('copias');
   const impresionCheckbox = document.getElementById('impresion');
   const resolucionInput = document.getElementById('res');
@@ -237,10 +218,7 @@ document.addEventListener('DOMContentLoaded', function()  {
   impresionCheckbox.addEventListener('change', calculateCost);
   resolucionInput.addEventListener('input', calculateCost);
   fotosInput.addEventListener('input', calculateCost);
-
   
-  
-
   /*Calcular el gasto*/
 
   function calculateCost() {
@@ -277,17 +255,30 @@ document.addEventListener('DOMContentLoaded', function()  {
     costoElement.textContent = `Costo Total: ${costoTotal.toFixed(2)} €`;
   }
 });
-
+/*AÑADIR Y BORRAR FILAS-------------------------------------------------------------------------------------------------*/
 function anyadir() {
-
+ 
   var tabla = document.createElement("table");
-  var titulo = tabla.createTBody();
-
+  
     for(f = 0; f < 1; f++) {
       var fila = tabla.insertRow();
-      for(c = 0; c < 7; c++) {
+      for(c = 0; c < 5; c++) {
         var celda = fila.insertCell();
-        celda.textContent = Math.random().toFixed(2) + "€";  
+        if(c==0){
+          celda.textContent = $("copias").value;  
+        }
+        if(c==1){
+          celda.textContent = $("numFotos").value;  
+        }
+        if(c==2){
+          celda.textContent = $("impresion").value;  
+        }
+        if(c==3){
+          celda.textContent = $("res").value;  
+        }     
+        if(c==4){
+          celda.textContent = $("costo").value;  
+        }  
       }
     } 
   document.getElementById("mitabla").appendChild(tabla);

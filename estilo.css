@@ -1,6 +1,5 @@
 .error {
     color: red;
-    font-size: 0.8em;
   }
  
  .botoncillo{
@@ -183,6 +182,9 @@ div>fieldset>legend{
 
 table, tr, th, td {
     border: 1px solid black;
+}
+td{
+    text-align: center;
 }
 
 #mitabla{

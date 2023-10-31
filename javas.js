@@ -56,7 +56,8 @@ function grande() {
 }
   
 /*---------------FUNCIONES FORMULARIOS Y TABLA----------------------------------------------------------------------------*/
-  function $(id) {
+/*----con esta funcion nos ahorramos poner document.getElementbyId--------------------------------------------------------------------------------------------------------------------*/
+function $(id) {
   return document.getElementById(id);
   }
 
@@ -78,8 +79,8 @@ function validaLogin(event) {
 
 
   /*ERRORES ONLINE*/
-  var errorNombre = document.getElementById('errorNombreUsuario');
-  var errorPass = document.getElementById('errorPass');
+  var errorNombre = $('errorNombreUsuario');
+  var errorPass = $('errorPass');
 
   if (nombre == "") {
     errorNombre.textContent=' requiere nombre usuario';
@@ -111,8 +112,8 @@ function validaRegistro(event) {
   var pass = document.getElementsByName('registroForm')[0].pass_reg.value;
   var rep_pass = document.getElementsByName('registroForm')[0].pass2.value;
   var email = document.getElementsByName('registroForm')[0].email_reg.value;
-  var hombre = document.getElementById('masculino').checked;
-  var mujer = document.getElementById('femenino').checked;
+  var hombre = $('masculino').checked;
+  var mujer = $('femenino').checked;
   var email = document.getElementsByName('registroForm')[0].email_reg.value;
   var fecha = document.getElementsByName('registroForm')[0].fecha1.value;
 
@@ -124,13 +125,13 @@ function validaRegistro(event) {
   var val_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   var val_fecha = /^\d{4}-\d{2}-\d{2}$/; //FORMATO FECHA
 
-  var errorNombre = document.getElementById('errorNombre_reg');
-  var errorPass = document.getElementById('errorPass_reg');
-  var errorPass2 = document.getElementById('errorPass2');
-  var errorMail = document.getElementById('errorMail_reg');
-  var errorSexo = document.getElementById('errorSexo_reg');
-  var errorFecha = document.getElementById('errorFecha_reg');
-  var errorNac = document.getElementById('errorNac_reg');
+  var errorNombre = $('errorNombre_reg');
+  var errorPass = $('errorPass_reg');
+  var errorPass2 = $('errorPass2');
+  var errorMail = $('errorMail_reg');
+  var errorSexo = $('errorSexo_reg');
+  var errorFecha = $('errorFecha_reg');
+  var errorNac = $('errorNac_reg');
 
   if(!val_nombre.test(nombre)){
     errorNombre.textContent='Necesitas introducir nombre';
@@ -205,10 +206,10 @@ function validaRegistro(event) {
 document.addEventListener('DOMContentLoaded', function()  {
 
     /*Cogemos los datos */
-  const copiasInput = document.getElementById('copias');
-  const impresionCheckbox = document.getElementById('impresion');
-  const resolucionInput = document.getElementById('res');
-  const fotosInput = document.getElementById('numFotos');
+  const copiasInput = $('copias');
+  const impresionCheckbox = $('impresion');
+  const resolucionInput = $('res');
+  const fotosInput = $('numFotos');
 
   // Asegúrate de que costoElement sea un elemento válido en tu HTML
   const costoElement = document.getElementById('costo');
@@ -257,7 +258,15 @@ document.addEventListener('DOMContentLoaded', function()  {
 });
 /*AÑADIR Y BORRAR FILAS-------------------------------------------------------------------------------------------------*/
 function anyadir() {
- 
+
+  const impresionCheckbox = $('impresion');
+  let impresionColor = impresionCheckbox.checked;
+  if (impresionColor) {
+    $("impresion").value = "color";
+  }else{
+    $("impresion").value = "blanco y negro";
+  }
+
   var tabla = document.createElement("table");
   
     for(f = 0; f < 1; f++) {
@@ -281,11 +290,11 @@ function anyadir() {
         }  
       }
     } 
-  document.getElementById("mitabla").appendChild(tabla);
+  $("mitabla").appendChild(tabla);
   }
 
   function borrar(){
-   let fila = document.getElementById("mitabla");
+   let fila = $("mitabla");
     if (fila.hasChildNodes()) {
       fila.removeChild(fila.lastChild);
   }

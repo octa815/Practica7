@@ -77,20 +77,22 @@ function validaLogin(event) {
   var nombre = document.getElementsByName('loginForm')[0].nombre.value;
   var pass = document.getElementsByName('loginForm')[0].pass.value;
 
+  var val_nombre = /^[a-zA-Z][a-zA-Z0-9]{2,14}$/;
+  var val_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,15}$/;
 
   /*ERRORES ONLINE*/
   var errorNombre = $('errorNombreUsuario');
   var errorPass = $('errorPass');
 
-  if (nombre == "") {
-    errorNombre.textContent=' requiere nombre usuario';
+  if(!val_nombre.test(nombre)){
+    errorNombre.textContent='Necesitas introducir nombre';
     ok = false;
   }else{
     errorNombre.textContent='';
   }
 
-  if (pass == "") {
-    errorPass.textContent='Necesitas introducir password';
+  if (!val_pass.test(pass) ) {
+    errorPass.textContent='Introduce una contraseña correcta';
     ok = false;
   }else{
     errorPass.textContent='';
@@ -122,13 +124,16 @@ function validaRegistro(event) {
 
   var val_nombre = /^[a-zA-Z][a-zA-Z0-9]{2,14}$/;
   var val_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,15}$/;
-  var val_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var val_email = /^(?!^\.)(?!.\.$)(?!.\.\.)[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+(\.[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+)@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)(\.[a-zA-Z]{2,})$/;
+  
+
   var val_fecha = /^\d{4}-\d{2}-\d{2}$/; //FORMATO FECHA
 
   var errorNombre = $('errorNombre_reg');
   var errorPass = $('errorPass_reg');
   var errorPass2 = $('errorPass2');
   var errorMail = $('errorMail_reg');
+  var errorEMail= $('errorEMail_reg');
   var errorSexo = $('errorSexo_reg');
   var errorFecha = $('errorFecha_reg');
   var errorNac = $('errorNac_reg');
@@ -141,7 +146,7 @@ function validaRegistro(event) {
   }
 
   if (!val_pass.test(pass) ) {
-    errorPass.textContent='Necesitas introducir password';
+    errorPass.textContent='Introduce una contraseña correcta';
     ok = false;
   }else{
     errorPass.textContent='';
@@ -153,16 +158,45 @@ function validaRegistro(event) {
   }else{
     errorPass2.textContent='';
   }
-
   if (!val_email.test(email) ) {
-    errorMail.textContent='Necesitas introducir mail';
+    errorMail.textContent='Introduce un mail correcto';
     ok = false;
   }else{
     errorMail.textContent='';
   }
+  if (email.length>254){
+    errorEMail.textContent='email no puede superar 254 caracteres';
+    ok = false;
+  }else{
+    errorEMail.textContent='';
+  }
 
+  /*
+    if (val_email.test(email)) {
+      var domainParts = email.split('@')[1].split('.');
+      if (domainParts.length > 1) {
+          var domain = domainParts[0];
+          var subdomain = domainParts.slice(1, -1).join('.'); // Omitir el primer y último elemento
+
+          if (domain.length <= 255 && subdomain.length <= 63) {
+            // El dominio y subdominio cumplen con las limitaciones
+          } else {
+            errorMail.textContent='Introduce un mail correcto';
+          }
+      } else {
+          var domain = domainParts[0];
+          if (domain.length <= 255) {
+              // Tu dirección de correo electrónico es válida
+          } else {
+            errorMail.textContent='Introduce un mail correcto';
+          }
+      }
+    } else {
+      errorMail.textContent='Introduce un mail correcto';
+    }
+*/
   if (!hombre && !mujer) {
-    errorSexo.textContent = 'selecciona un sexo.';
+    errorSexo.textContent = 'Selecciona un sexo.';
     ok = false;
   } else {
     errorSexo.textContent = '';
@@ -174,6 +208,7 @@ function validaRegistro(event) {
   }else {
     errorFecha.textContent = '';
   }
+
 
   var fechaActual = new Date();        //fecha de hoy
   var fechaNac = new Date(fecha);     //fecha nacimiento
@@ -202,6 +237,8 @@ function validaRegistro(event) {
 
 
 /*CÁLCULO--------------------------------------------------------------------------------------------------------------*/
+
+let costoTotalGlobal = 0;
 
 document.addEventListener('DOMContentLoaded', function()  {
 
@@ -252,12 +289,18 @@ document.addEventListener('DOMContentLoaded', function()  {
       costoTotal += numFotos * 0.02;
     }
 
+    costoTotalGlobal = costoTotal;
+
     // Muestra el costo total en el elemento HTML
     costoElement.textContent = `Costo Total: ${costoTotal.toFixed(2)} €`;
+
+    //return costoTotal;
+
   }
 });
 /*AÑADIR Y BORRAR FILAS-------------------------------------------------------------------------------------------------*/
 function anyadir() {
+
 
   const impresionCheckbox = $('impresion');
   let impresionColor = impresionCheckbox.checked;
@@ -286,7 +329,7 @@ function anyadir() {
           celda.textContent = $("res").value;  
         }     
         if(c==4){
-          celda.textContent = $("costo").value;  
+          celda.textContent = costoTotalGlobal.toFixed(2) + " €";  
         }  
       }
     } 

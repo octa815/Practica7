@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function()  {
     // Muestra el costo total en el elemento HTML
     costoElement.textContent = `Costo Total: ${costoTotal.toFixed(2)} €`;
 
-    //return costoTotal;
+    return costoTotal;
 
   }
 });

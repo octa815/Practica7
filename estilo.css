@@ -136,7 +136,7 @@ body{
     background-image: url("./imagenes//black.jpg");
     background-size: cover;
    /* background: linear-gradient(rgb(0, 0, 0), #454845);*/
-    color: #2c2a2a;
+    color: white;
     fieldset{
         border-radius: 8px;
         border: 8px;

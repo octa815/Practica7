@@ -124,7 +124,7 @@ function validaRegistro(event) {
 
   var val_nombre = /^[a-zA-Z][a-zA-Z0-9]{2,14}$/;
   var val_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,15}$/;
-  var val_email = /^(?!^\.)(?!.\.$)(?!.\.\.)[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+(\.[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+)@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)(\.[a-zA-Z]{2,})$/;
+  var val_email = /^[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+(\.[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+)@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)(\.[a-zA-Z]{2,})$/;
   
 
   var val_fecha = /^\d{4}-\d{2}-\d{2}$/; //FORMATO FECHA

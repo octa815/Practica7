@@ -135,12 +135,12 @@ body{
     background-image: url("./imagenes//black.jpg");
     background-size: cover;
    /* background: linear-gradient(rgb(0, 0, 0), #454845);*/
-    color: #2c2a2a;
+    color: white;
     fieldset{
         border-radius: 8px;
         border: 8px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
-        background-color: #2c2a2a;
+        background-color: darkgrey;
         justify-content: flex-start;
         flex-direction: column;
         flex-wrap: wrap;

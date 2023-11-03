@@ -134,26 +134,27 @@ body{
 .dark-mode {
     background-image: url("./imagenes//black.jpg");
     background-size: cover;
-   /* background: linear-gradient(rgb(0, 0, 0), #454845);*/
     color: white;
-    fieldset{
-        border-radius: 8px;
-        border: 8px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
-        background-color: darkgrey;
-        justify-content: flex-start;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: space-around;
-        flex-wrap: wrap;
-        padding: .5em;
-    }
-    table, tr, th, td {
-        border: 1px solid white;
-    }
 }
 
-.grande-mode {
+.dark-mode fieldset{
+    border-radius: 8px;
+    border: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    background-color: #1b1b1b;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    flex-wrap: wrap;
+    padding: .5em;
+}
+
+.dark-mode  table, tr, th, td {
+    border: 1px solid white;
+} 
+
+.grande-mode   {
     font-size: 120%; 
     line-height: 1.8;
 }
@@ -725,13 +726,8 @@ input{
         display: inline-block;
         padding: .60em;
         justify-content: center;
-        justify-items: center;
-   
-
-    #mainalbum{
-       display: block;
+        justify-items: center;    
     }
-
     #user{
         max-height: 100px;
 
@@ -745,12 +741,8 @@ input{
         max-height: 170px;
 
     }
+}
 
-    main {
-        max-width: 360px;
-    }
-}
-}
     @media (min-width: 700px){
 
     }

@@ -582,6 +582,7 @@ h3{
 }
 
 .pie{
+    margin: 1em 0em 0em 0em;
     background:linear-gradient(to right,#292828,#f4f2f2);
 }
 

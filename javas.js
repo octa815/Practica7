@@ -56,20 +56,20 @@ function grande() {
 }
   
 /*---------------FUNCIONES FORMULARIOS Y TABLA----------------------------------------------------------------------------*/
-/*----con esta funcion nos ahorramos poner document.getElementbyId--------------------------------------------------------------------------------------------------------------------*/
+/*----con esta funcion nos ahorramos poner document.getElementbyId--------------------------------------------------------
 function $(id) {
   return document.getElementById(id);
-  }
+  }*/
 
-/*CARGAR-----------------------------------------------------------------------------------------------------------------*/
+/*CARGAR-----------------------------------------------------------------------------------------------------------------
 
 function load() {
   document.getElementsByName('loginForm')[0].addEventListener("submit", validaLogin);
   document.getElementsByName('registroForm')[0].addEventListener("submit", validaRegistro);
 }
-document.addEventListener("DOMContentLoaded", load, false);
+document.addEventListener("DOMContentLoaded", load, false);*/
 
-/*VALIDAR LOGIN-----------------------------------------------------------------------------------------------------------*/
+/*VALIDAR LOGIN-----------------------------------------------------------------------------------------------------------
 function validaLogin(event) {
   
   var ok = true;
@@ -78,9 +78,9 @@ function validaLogin(event) {
   var pass = document.getElementsByName('loginForm')[0].pass.value;
 
   var val_nombre = /^[a-zA-Z][a-zA-Z0-9]{2,14}$/;
-  var val_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,15}$/;
+  var val_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,15}$/;*/
 
-  /*ERRORES ONLINE*/
+  /*ERRORES ONLINE-----------------------------------------------------------------------------------------------------
   var errorNombre = $('errorNombreUsuario');
   var errorPass = $('errorPass');
 
@@ -103,8 +103,8 @@ function validaLogin(event) {
   } else {
     alert("Todo correcto, se envía el formulario");
   }
-}
-/*VALIDAR REGISTRO--------------------------------------------------------------------------------------------------------*/
+}*/
+/*VALIDAR REGISTRO--------------------------------------------------------------------------------------------------------
 
 function validaRegistro(event) {
   
@@ -117,14 +117,15 @@ function validaRegistro(event) {
   var hombre = $('masculino').checked;
   var mujer = $('femenino').checked;
   var email = document.getElementsByName('registroForm')[0].email_reg.value;
-  var fecha = document.getElementsByName('registroForm')[0].fecha1.value;
+  var fecha = document.getElementsByName('registroForm')[0].fecha1.value;*/
 
   
-/*VALIDACIONES*/
+/*VALIDACIONES-----------------------------------
 
   var val_nombre = /^[a-zA-Z][a-zA-Z0-9]{2,14}$/;
   var val_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,15}$/;
-  var val_email = /^[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+(\.[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+$/;
+  var val_email = /^(?!^\.)(?!.\.$)(?!.\.\.)[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+(\.[a-zA-Z0-9!#$%&'+\-/=?^_`{|}~]+)@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)(\.[a-zA-Z]{2,})$/;
+  
 
   var val_fecha = /^\d{4}-\d{2}-\d{2}$/; //FORMATO FECHA
 
@@ -168,32 +169,9 @@ function validaRegistro(event) {
     ok = false;
   }else{
     errorEMail.textContent='';
-  }
+  }*/
 
   /*
-    if (val_email.test(email)) {
-      var domainParts = email.split('@')[1].split('.');
-      if (domainParts.length > 1) {
-          var domain = domainParts[0];
-          var subdomain = domainParts.slice(1, -1).join('.'); // Omitir el primer y último elemento
-
-          if (domain.length <= 255 && subdomain.length <= 63) {
-            // El dominio y subdominio cumplen con las limitaciones
-          } else {
-            errorMail.textContent='Introduce un mail correcto';
-          }
-      } else {
-          var domain = domainParts[0];
-          if (domain.length <= 255) {
-              // Tu dirección de correo electrónico es válida
-          } else {
-            errorMail.textContent='Introduce un mail correcto';
-          }
-      }
-    } else {
-      errorMail.textContent='Introduce un mail correcto';
-    }
-*/
   if (!hombre && !mujer) {
     errorSexo.textContent = 'Selecciona un sexo.';
     ok = false;
@@ -232,31 +210,31 @@ function validaRegistro(event) {
   } else {
     alert("Todo correcto, se envía el formulario");
   }
-}
+}*/
 
 
-/*CÁLCULO--------------------------------------------------------------------------------------------------------------*/
+/*CÁLCULO--------------------------------------------------------------------------------------------------------------
 
 let costoTotalGlobal = 0;
 
-document.addEventListener('DOMContentLoaded', function()  {
+document.addEventListener('DOMContentLoaded', function()  {*/
 
-    /*Cogemos los datos */
+    /*Cogemos los datos 
   const copiasInput = $('copias');
   const impresionCheckbox = $('impresion');
   const resolucionInput = $('res');
   const fotosInput = $('numFotos');
 
   // Asegúrate de que costoElement sea un elemento válido en tu HTML
-  const costoElement = document.getElementById('costo');
+  const costoElement = document.getElementById('costo');*/
 
-  /*Detectar cambios en el formulario*/
+  /*Detectar cambios en el formulario
   copiasInput.addEventListener('input', calculateCost);
   impresionCheckbox.addEventListener('change', calculateCost);
   resolucionInput.addEventListener('input', calculateCost);
-  fotosInput.addEventListener('input', calculateCost);
+  fotosInput.addEventListener('input', calculateCost);*/
   
-  /*Calcular el gasto*/
+  /*Calcular el gasto
 
   function calculateCost() {
     // Obtén los valores de los elementos y los conviertes a números (si es necesario)
@@ -293,11 +271,11 @@ document.addEventListener('DOMContentLoaded', function()  {
     // Muestra el costo total en el elemento HTML
     costoElement.textContent = `Costo Total: ${costoTotal.toFixed(2)} €`;
 
-    return costoTotal;
+    //return costoTotal;
 
   }
-});
-/*AÑADIR Y BORRAR FILAS-------------------------------------------------------------------------------------------------*/
+});*/
+/*AÑADIR Y BORRAR FILAS-------------------------------------------------------------------------------------------------
 function anyadir() {
 
 
@@ -340,6 +318,4 @@ function anyadir() {
     if (fila.hasChildNodes()) {
       fila.removeChild(fila.lastChild);
   }
-}
-
-
+}*/

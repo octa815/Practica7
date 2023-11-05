@@ -28,7 +28,7 @@
             <aside>
                 <figure>
                     <h4 title="Foto 2">Foto 2</h4>
-                    <a href="mensaje_error.php"><img src="./imagenes/gorra.png" title="MenosTrece" alt="imagen"></a>
+                    <a href="detalle.php"><img src="./imagenes/gorra.png" title="MenosTrece" alt="imagen"></a>
                     <footer>
                         <fieldset>
                             <legend>Usuario</legend>
@@ -39,7 +39,7 @@
                 </figure>
                 <figure>
                     <h4 title="Foto 3">Foto 3</h4>
-                    <a href="mensaje_error.php"><img src="./imagenes/muradin.jpg" title="Murdin" alt="imagen"></a>
+                    <a href="detalle.php"><img src="./imagenes/muradin.jpg" title="Murdin" alt="imagen"></a>
                     <footer>
                         <fieldset>
                             <legend>Usuario</legend>
@@ -50,7 +50,7 @@
                 </figure>
                 <figure>
                     <h4 title="Foto 4">Foto 4</h4>
-                    <a href="mensaje_error.php"><img src="./imagenes/horda.jpg" alt="imagen"></a>
+                    <a href="detalle.php"><img src="./imagenes/horda.jpg" alt="imagen"></a>
                     <footer>
                         <fieldset>
                             <legend>Usuario</legend>

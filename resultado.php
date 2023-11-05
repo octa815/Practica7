@@ -1,12 +1,12 @@
 <?php
-require_once("cabecera_privada.php");
+require_once("cabecera.php");
 ?>
     <main>
         <section id="resultados-busqueda">
             <h2>Resultados de la búsqueda</h2>
             <aside>
                 <figure>
-                    <h4 title="Foto 2">Foto 2</h4>
+                    <h4 title="Foto 2">Foto 1</h4>
                     <a href="detalle.php"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
                     <footer>
                         <fieldset>

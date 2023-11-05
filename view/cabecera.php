@@ -32,7 +32,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo" id="logo"></a>
+        <a href="index.php"><img src="./imagenes/sunegamilogo.png" alt="logo" id="logo"></a>
         <form id="botbus">
             <button type="submit" class="icon-search"></button> 
             <input type="text" class="busqueda">

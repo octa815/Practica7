@@ -30,10 +30,7 @@
     require_once('inicio.php');
 ?>
 <!--************************************************************************************-->
-    <script>
-        login();
-        registro();
-    </script>
+    
 <?php    
     require_once('pie.php');
 ?>

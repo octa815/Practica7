@@ -1,6 +1,6 @@
 <aside contenteditable="false">
         <aside id="login" class="modal" >
-            <form action="index2.php" class="modal-content animate" name="loginForm">
+            <form action="inicio.php" class="modal-content animate" name="loginForm" method="post">
                 <section id="seccion">
                 <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <fieldset>  
@@ -33,7 +33,7 @@
     <!--************************************************************************************-->
     <aside contenteditable="false">
         <aside id="registro" class="modal2">
-            <form action="index.php" class="modal2-content animate" name="registroForm">
+            <form action="index.php?id=1" class="modal2-content animate" name="registroForm" method="POST">
                 <section id="seccion2">
                     <fieldset>  
                         <legend>TUS DATOS</legend>  

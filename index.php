@@ -1,110 +1,50 @@
-<?php    
-    require_once('cabecera.php');
+<?php
+
+// Incluir archivos y configuraciones necesarias
+
+// Obtener la ruta de la petición
+$request_uri = $_SERVER['REQUEST_URI'];
+
+// Enrutamiento
+switch ($request_uri) {
+    case '/daw/':
+        include ('controller/index.php');
+        break;
+    case '/daw/accesibilidad.php':
+        include ('controller/accesibilidad.php');
+        break;
+    case '/daw/buscar.php':
+        include ('controller/buscar.php');
+        break; 
+    case '/daw/crear_album.php':
+        include ('controller/crear_album.php');
+        break; 
+    case '/daw/detalle.php':
+        include ('controller/detalle.php');
+        break;
+    case '/daw/detalle.php':
+        include ('controller/detalle.php');
+        break;
+    case '/daw/index2.php':
+        include ('controller/index2.php');
+        break;
+    case '/daw/mensaje_error.php':
+        include ('controller/mensaje_error.php');
+        break;
+    case '/daw/resultado.php?titulo=&fecha1=&fecha2=&pais=':
+        include ('controller/resultado.php');
+        break;  
+    case '/daw/respuesta_solicitar_album.php?nombre=&titulo=&texto_ad=&correo=&direccion=&numero=&cp=&telefono=&color_portada=%23000000&copias=&numFotos=&res=150&fecha1=':
+        include ('controller/respuesta_solicitar_album.php');
+        break;  
+    case '/daw/solicitar_album.php':
+        include ('controller/solicitar_album.php');
+        break; 
+    
+    // Añadir más rutas según sea necesario
+    default:
+        header('HTTP/1.0 404 Not Found');
+        echo 'Página no encontrada';
+        break;
+}
 ?>
-    <main>
-        <section id="principal">
-            <h3> FOTO PRINCIPAL </h3>
-            <article>
-                <h4 title="No registrado">Esta foto es un ejemplo de usuario no registrado</h4>               
-                <a href="mensaje_error.html">
-                    <img src="./imagenes/gorra.png" alt="imagen" class="imagenes ">
-                    <img src="./imagenes/muradin.jpg" alt="imagen" class="imagenes ">
-                    <img src="./imagenes/horda.jpg" alt="imagen" class="imagenes ">
-                    <img src="./imagenes/taj.jpeg" alt="imagen" class="imagenes ">
-                    <img src="./imagenes/dia4.jpg" alt="imagen" class="imagenes">
-                    <img src="./imagenes/images.jpg" alt="imagen" class="imagenes">
-                </a>
-                <footer>
-                    <fieldset>
-                        <legend>Usuario</legend>
-                        <p class="icon-globe">País</p>
-                        <p class="icon-calendar">Fecha: 2023-09-25</p>
-                    </fieldset>  
-                </footer>
-            </article>
-        </section>
-        <section id="secundaria">
-            <h3> FOTOS secundarias </h3>
-            <aside>
-                <figure>
-                    <h4 title="Foto 2">Foto 2</h4>
-                    <a href="detalle.php"><img src="./imagenes/gorra.png" title="MenosTrece" alt="imagen"></a>
-                    <footer>
-                        <fieldset>
-                            <legend>Usuario</legend>
-                            <p class="icon-globe">País</p>
-                            <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </fieldset> 
-                    </footer>
-                </figure>
-                <figure>
-                    <h4 title="Foto 3">Foto 3</h4>
-                    <a href="detalle.php"><img src="./imagenes/muradin.jpg" title="Murdin" alt="imagen"></a>
-                    <footer>
-                        <fieldset>
-                            <legend>Usuario</legend>
-                            <p class="icon-globe">País</p>
-                            <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </fieldset> 
-                    </footer>
-                </figure>
-                <figure>
-                    <h4 title="Foto 4">Foto 4</h4>
-                    <a href="detalle.php"><img src="./imagenes/horda.jpg" alt="imagen"></a>
-                    <footer>
-                        <fieldset>
-                            <legend>Usuario</legend>
-                            <p class="icon-globe">País</p>
-                            <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </fieldset> 
-                    </footer>
-                </figure>
-                <figure>
-                    <h4 title="Foto 2">Foto 2</h4>
-                    <a href="mensaje_error.php"><img src="./imagenes/taj.jpeg" alt="imagen"></a>
-                    <footer>
-                        <fieldset>
-                            <legend>Usuario</legend>
-                            <p class="icon-globe">País</p>
-                            <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </fieldset> 
-                    </footer>
-                </figure>
-                <figure>
-                    <h4 title="Foto 2">Foto 2</h4>
-                    <a href="mensaje_error.php"><img src="./imagenes/dia4.jpg" alt="imagen"></a>
-                    <footer>
-                        <fieldset>
-                            <legend>Usuario</legend>
-                            <p class="icon-globe">País</p>
-                            <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </fieldset> 
-                    </footer>
-                </figure>
-                <figure>
-                    <h4 title="Foto 2">Foto 2</h4>
-                    <a href="mensaje_error.php"><img src="./imagenes/images.jpg" alt="imagen"></a>
-                    <footer>
-                        <fieldset>
-                            <legend>Usuario</legend>
-                            <p class="icon-globe">País</p>
-                            <p class="icon-calendar">Fecha: 2023-09-25</p>
-                        </fieldset> 
-                    </footer>
-                </figure>
-            </aside>
-        </section>
-    </main>
-    <!--************************************************************************************-->
-    <?php    
-        require_once('inicio.php');
-    ?>
-    <!--************************************************************************************-->
-    <script>
-        scroll();
-    </script>
-<?php    
-    require_once('pie.php');
-?>
-   
-   

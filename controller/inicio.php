@@ -1,6 +1,5 @@
 <?php
 
-
 $usuarios_permitidos = array(
     'pepe' => '1234',
     'juan' => '4321',

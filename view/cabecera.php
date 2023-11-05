@@ -32,7 +32,7 @@
 </head>
 <body>
     <header>
-        <a href="index.php"><img src="./imagenes/sunegamilogo.png" alt="logo" id="logo"></a>
+        <a href="./"><img src="./imagenes/sunegamilogo.png" alt="logo" id="logo"></a>
         <form id="botbus">
             <button type="submit" class="icon-search"></button> 
             <input type="text" class="busqueda">
@@ -51,7 +51,7 @@
             <label for="chkMenu">&equiv;</label>
             <input type="checkbox" id="chkMenu">
             <ul>
-                <li><a href="index.php" class="icon-home"><span>Inicio</span></a></li>
+                <li><a href="./" class="icon-home"><span>Inicio</span></a></li>
                 <li><a href="buscar.php" class="icon-search"><span>Buscar</span></a></li>
             </ul>
         </nav>       

@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/15361561/how-can-i-split-url-with-htaccess
+
+
+
+
+HTACCES
